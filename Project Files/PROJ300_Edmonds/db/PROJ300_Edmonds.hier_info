@@ -1,0 +1,10 @@
+|Top
+GPIO_0[1] <= led_test:inst.led
+SW[0] => led_test:inst.switch
+
+
+|Top|led_test:inst
+switch => led.DATAIN
+led <= switch.DB_MAX_OUTPUT_PORT_TYPE
+
+
