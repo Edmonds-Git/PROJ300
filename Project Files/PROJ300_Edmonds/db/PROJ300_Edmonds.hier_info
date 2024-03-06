@@ -196,11 +196,15 @@ clk => angle1[6]~reg0.CLK
 clk => angle1[7]~reg0.CLK
 SW1 => Equal0.IN0
 SW1 => Equal1.IN0
+SW1 => Equal2.IN0
 SW2 => Equal0.IN1
 SW2 => Equal1.IN1
+SW2 => Equal2.IN1
 SW3 => Equal0.IN2
 SW3 => Equal1.IN2
+SW3 => Equal2.IN2
 SW4 => Equal0.IN3
 SW4 => Equal1.IN3
+SW4 => Equal2.IN3
 
 

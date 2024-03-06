@@ -14,7 +14,11 @@ module PWM_SERVO_CONTROL (
 	input logic [7:0]angle3,
 	input logic [7:0]angle4);
 	
-	logic [19:0]timer_t1; //max value is 93,244 (544+(10./0.02)*180)
+	//define timers
+	logic [17:0]timer_t1; //max value is 119900 (27200+(10./0.02)*180)
+	logic [17:0]timer_t2;
+	logic [17:0]timer_t3;
+	logic [17:0]timer_t4;
 //	logic [16:0]Timer_C1;
 	logic [19:0]mxvlue = 20'd1000000; //prev value 17'd93244
 	typedef int unsigned state_t1;
@@ -40,15 +44,27 @@ module PWM_SERVO_CONTROL (
 	begin
 		if(nextangle == 1'd1)
 			timer_t1 <= 15'd27200 + angle1 *  10'd515;
-//			timer_t2 <= 10'd544 + angle2 *  10'd515;
-//			timer_t3 <= 10'd544 + angle3 *  10'd515;
-//			timer_t4 <= 10'd544 + angle4 *  10'd515;
+			timer_t2 <= 15'd27200 + angle1 *  10'd515;
+			timer_t3 <= 15'd27200 + angle1 *  10'd515;
+			timer_t4 <= 15'd27200 + angle1 *  10'd515;
 		else
 			state1 <= next_state1;
 			if (state1 > mxvlue-timer_t1)
 				servo1 = 1;
 			else
 				servo1 = 0;
+			if (state1 > mxvlue-timer_t2)
+				servo2 = 1;
+			else
+				servo2 = 0;
+			if (state1 > mxvlue-timer_t3)
+				servo3 = 1;
+			else
+				servo3 = 0;
+			if (state1 > mxvlue-timer_t4)
+				servo4 = 1;
+			else
+				servo4 = 0;
 		
 	end
 //	always_ff @(posedge clk) 
