@@ -18,6 +18,8 @@ module ANGLE_OUTPUT_UNIT (
 				angle1 = 8'd0;
 			else if (switches == 4'b1111)
 				angle1 = 8'd180; 
+			else if (switches == 4'b1100)
+				angle1 = 8'd90; 
 		end
 endmodule
 		
