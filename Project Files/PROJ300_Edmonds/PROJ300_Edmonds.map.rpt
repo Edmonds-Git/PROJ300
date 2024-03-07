@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PROJ300_Edmonds
-Wed Mar 06 11:29:12 2024
+Thu Mar 07 16:22:23 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,14 +47,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 06 11:29:12 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 07 16:22:23 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PROJ300_Edmonds                             ;
 ; Top-level Entity Name           ; Top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 55                                          ;
-; Total pins                      ; 7                                           ;
+; Total registers                 ; 57                                          ;
+; Total pins                      ; 14                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 1                                           ;
@@ -192,20 +192,20 @@ https://fpgasoftware.intel.com/eula.
 ; Combinational ALUT usage for logic          ; 99             ;
 ;     -- 7 input functions                    ; 0              ;
 ;     -- 6 input functions                    ; 21             ;
-;     -- 5 input functions                    ; 5              ;
-;     -- 4 input functions                    ; 8              ;
+;     -- 5 input functions                    ; 9              ;
+;     -- 4 input functions                    ; 4              ;
 ;     -- <=3 input functions                  ; 65             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 55             ;
+; Dedicated logic registers                   ; 57             ;
 ;                                             ;                ;
-; I/O pins                                    ; 7              ;
+; I/O pins                                    ; 14             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 55             ;
-; Total fan-out                               ; 518            ;
-; Average fan-out                             ; 3.07           ;
+; Maximum fan-out                             ; 57             ;
+; Total fan-out                               ; 538            ;
+; Average fan-out                             ; 2.91           ;
 +---------------------------------------------+----------------+
 
 
@@ -214,9 +214,9 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name       ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-------------------+--------------+
-; |Top                         ; 99 (0)              ; 55 (0)                    ; 0                 ; 1          ; 7    ; 0            ; |Top                         ; Top               ; work         ;
+; |Top                         ; 99 (0)              ; 57 (0)                    ; 0                 ; 1          ; 14   ; 0            ; |Top                         ; Top               ; work         ;
 ;    |ANGLE_OUTPUT_UNIT:inst|  ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_OUTPUT_UNIT:inst  ; ANGLE_OUTPUT_UNIT ; work         ;
-;    |PWM_SERVO_CONTROL:inst2| ; 95 (95)             ; 52 (52)                   ; 0                 ; 1          ; 0    ; 0            ; |Top|PWM_SERVO_CONTROL:inst2 ; PWM_SERVO_CONTROL ; work         ;
+;    |PWM_SERVO_CONTROL:inst2| ; 95 (95)             ; 54 (54)                   ; 0                 ; 1          ; 0    ; 0            ; |Top|PWM_SERVO_CONTROL:inst2 ; PWM_SERVO_CONTROL ; work         ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -233,17 +233,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+---------------------------------------+----------------------------------------------+
-; Register name                         ; Reason for Removal                           ;
-+---------------------------------------+----------------------------------------------+
-; PWM_SERVO_CONTROL:inst2|timer_t1[19]  ; Stuck at GND due to stuck port data_in       ;
-; ANGLE_OUTPUT_UNIT:inst|angle1[3,6]    ; Merged with ANGLE_OUTPUT_UNIT:inst|angle1[1] ;
-; ANGLE_OUTPUT_UNIT:inst|angle1[5,7]    ; Merged with ANGLE_OUTPUT_UNIT:inst|angle1[2] ;
-; ANGLE_OUTPUT_UNIT:inst|angle1[0]      ; Stuck at GND due to stuck port data_in       ;
-; Total Number of Removed Registers = 6 ;                                              ;
-+---------------------------------------+----------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++----------------------------------------+--------------------------------------------------+
+; Register name                          ; Reason for Removal                               ;
++----------------------------------------+--------------------------------------------------+
+; PWM_SERVO_CONTROL:inst2|timer_t2[0]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[0]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[0]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[0]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[0]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[0]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[1]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[1]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[1]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[1]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[1]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[1]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[2]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[2]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[2]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[2]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[2]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[2]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[3]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[3]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[3]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[3]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[3]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[3]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[4]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[4]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[4]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[4]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[4]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[4]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[5]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[5]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[5]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[5]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[5]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[5]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[6]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[6]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[6]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[6]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[6]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[6]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[7]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[7]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[7]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[7]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[7]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[7]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[8]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[8]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[8]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[8]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[8]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[8]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[9]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[9]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[9]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[9]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[9]    ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[9]  ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[10]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[10] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[10]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[10] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[10]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[10] ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[11]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[11] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[11]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[11] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[11]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[11] ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[12]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[12] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[12]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[12] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[12]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[12] ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[13]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[13] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[13]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[13] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[13]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[13] ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[14]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[14] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[14]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[14] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[14]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[14] ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[15]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[15] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[15]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[15] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[15]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[15] ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[16]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[16] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[16]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[16] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[16]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[16] ;
+; PWM_SERVO_CONTROL:inst2|timer_t2[17]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[17] ;
+; PWM_SERVO_CONTROL:inst2|timer_t3[17]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[17] ;
+; PWM_SERVO_CONTROL:inst2|timer_t4[17]   ; Merged with PWM_SERVO_CONTROL:inst2|timer_t1[17] ;
+; ANGLE_OUTPUT_UNIT:inst|angle1[3,6]     ; Merged with ANGLE_OUTPUT_UNIT:inst|angle1[1]     ;
+; ANGLE_OUTPUT_UNIT:inst|angle1[5,7]     ; Merged with ANGLE_OUTPUT_UNIT:inst|angle1[2]     ;
+; ANGLE_OUTPUT_UNIT:inst|angle1[0]       ; Stuck at GND due to stuck port data_in           ;
+; Total Number of Removed Registers = 59 ;                                                  ;
++----------------------------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -251,12 +304,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 55    ;
+; Total registers                              ; 57    ;
 ; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Clock Enable       ; 57    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -275,26 +328,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 55                          ;
-;     ENA               ; 22                          ;
+; arriav_ff             ; 57                          ;
+;     ENA               ; 25                          ;
 ;     ENA SCLR          ; 32                          ;
-;     plain             ; 1                           ;
 ; arriav_lcell_comb     ; 99                          ;
 ;     arith             ; 52                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 49                          ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 48                          ;
 ;         2 data inputs ; 1                           ;
 ;     normal            ; 47                          ;
 ;         2 data inputs ; 12                          ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 8                           ;
-;         5 data inputs ; 5                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 9                           ;
 ;         6 data inputs ; 21                          ;
 ; arriav_mac            ; 1                           ;
-; boundary_port         ; 7                           ;
+; boundary_port         ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.90                        ;
-; Average LUT depth     ; 4.03                        ;
+; Average LUT depth     ; 3.98                        ;
 +-----------------------+-----------------------------+
 
 
@@ -313,7 +365,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Mar 06 11:29:00 2024
+    Info: Processing started: Thu Mar 07 16:22:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -326,28 +378,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file pwm_ser
 Info (12021): Found 1 design units, including 1 entities, in source file angle_output_unit.sv
     Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 1
 Info (12127): Elaborating entity "Top" for the top level hierarchy
+Warning (275089): Not all bits in bus "GPIO_0[7..1]" are used
+Warning (275080): Converted elements in bus name "GPIO_0" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "GPIO_0[1]" to "GPIO_01"
+    Warning (275081): Converted element name(s) from "GPIO_0[3]" to "GPIO_03"
+    Warning (275081): Converted element name(s) from "GPIO_0[5]" to "GPIO_05"
+    Warning (275081): Converted element name(s) from "GPIO_0[7]" to "GPIO_07"
+Warning (275089): Not all bits in bus "SW[9..0]" are used
+Warning (275080): Converted elements in bus name "SW" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "SW[0]" to "SW0"
+    Warning (275081): Converted element name(s) from "SW[1]" to "SW1"
+    Warning (275081): Converted element name(s) from "SW[2]" to "SW2"
+    Warning (275081): Converted element name(s) from "SW[3]" to "SW3"
+    Warning (275081): Converted element name(s) from "SW[4]" to "SW4"
+    Warning (275081): Converted element name(s) from "SW[6]" to "SW6"
+    Warning (275081): Converted element name(s) from "SW[7]" to "SW7"
+    Warning (275081): Converted element name(s) from "SW[8]" to "SW8"
+    Warning (275081): Converted element name(s) from "SW[9]" to "SW9"
 Info (12128): Elaborating entity "PWM_SERVO_CONTROL" for hierarchy "PWM_SERVO_CONTROL:inst2"
-Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(26): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 26
-Warning (10034): Output port "servo2" at PWM_SERVO_CONTROL.sv(7) has no driver File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 7
-Warning (10034): Output port "servo3" at PWM_SERVO_CONTROL.sv(8) has no driver File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 8
-Warning (10034): Output port "servo4" at PWM_SERVO_CONTROL.sv(9) has no driver File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 9
+Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(30): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 30
 Info (12128): Elaborating entity "ANGLE_OUTPUT_UNIT" for hierarchy "ANGLE_OUTPUT_UNIT:inst"
-Warning (10034): Output port "angle2" at ANGLE_OUTPUT_UNIT.sv(3) has no driver File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 3
-Warning (10034): Output port "angle3" at ANGLE_OUTPUT_UNIT.sv(4) has no driver File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 4
-Warning (10034): Output port "angle4" at ANGLE_OUTPUT_UNIT.sv(5) has no driver File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 126 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 118 logic cells
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW6"
+    Warning (15610): No output dependent on input pin "SW7"
+    Warning (15610): No output dependent on input pin "SW8"
+Info (21057): Implemented 136 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 121 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Wed Mar 06 11:29:12 2024
-    Info: Elapsed time: 00:00:12
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Thu Mar 07 16:22:23 2024
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:18
 
 
