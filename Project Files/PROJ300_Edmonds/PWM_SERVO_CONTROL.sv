@@ -43,28 +43,32 @@ module PWM_SERVO_CONTROL (
 	always_ff @(posedge clk) 
 	begin
 		if(nextangle == 1'd1)
-			timer_t1 <= 15'd27200 + angle1 *  10'd515;
-			timer_t2 <= 15'd27200 + angle1 *  10'd515;
-			timer_t3 <= 15'd27200 + angle1 *  10'd515;
-			timer_t4 <= 15'd27200 + angle1 *  10'd515;
+			begin
+				timer_t1 <= 15'd27200 + angle1 *  10'd515;
+				timer_t2 <= 15'd27200 + angle1 *  10'd515;
+				timer_t3 <= 15'd27200 + angle1 *  10'd515;
+				timer_t4 <= 15'd27200 + angle1 *  10'd515;
+			end
 		else
-			state1 <= next_state1;
-			if (state1 > mxvlue-timer_t1)
-				servo1 = 1;
-			else
-				servo1 = 0;
-			if (state1 > mxvlue-timer_t2)
-				servo2 = 1;
-			else
-				servo2 = 0;
-			if (state1 > mxvlue-timer_t3)
-				servo3 = 1;
-			else
-				servo3 = 0;
-			if (state1 > mxvlue-timer_t4)
-				servo4 = 1;
-			else
-				servo4 = 0;
+			begin
+				state1 <= next_state1;
+				if (state1 > mxvlue-timer_t1)
+					servo1 = 1;
+				else
+					servo1 = 0;
+				if (state1 > mxvlue-timer_t2)
+					servo2 = 1;
+				else
+					servo2 = 0;
+				if (state1 > mxvlue-timer_t3)
+					servo3 = 1;
+				else
+					servo3 = 0;
+				if (state1 > mxvlue-timer_t4)
+					servo4 = 1;
+				else
+					servo4 = 0;
+			end
 		
 	end
 //	always_ff @(posedge clk) 
