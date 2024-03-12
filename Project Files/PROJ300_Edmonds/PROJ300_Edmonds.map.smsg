@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at PWM_SERVO_CONTROL.sv(43): always construct contains both blocking and non-blocking assignments File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 43
+Warning (10268): Verilog HDL information at PWM_SERVO_CONTROL.sv(43): always construct contains both blocking and non-blocking assignments File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 43
