@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "GPIO_01",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_03",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_05",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO_07",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "SW0",
+					"strict" : false
+				},
+				{
+					"name" : "SW1",
+					"strict" : false
+				},
+				{
+					"name" : "SW2",
+					"strict" : false
+				},
+				{
+					"name" : "SW3",
+					"strict" : false
+				},
+				{
+					"name" : "SW4",
+					"strict" : false
+				},
+				{
+					"name" : "SW9",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

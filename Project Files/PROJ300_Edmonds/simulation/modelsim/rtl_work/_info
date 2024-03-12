@@ -1,0 +1,91 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/simulation/modelsim
+vANGLE_OUTPUT_UNIT
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1709223405
+!i10b 1
+!s100 6AMijL<WQT?K]nYKjaF8U0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ImZP=Nmjl:[z<Rj]SF]_ej0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1709213894
+8C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv
+FC:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv
+!i122 2
+L0 1 22
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1709223405.000000
+!s107 C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds|C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work {+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds}
+Z7 tCvgOpt 0
+n@a@n@g@l@e_@o@u@t@p@u@t_@u@n@i@t
+vPWM_SERVO_CONTROL
+R1
+!s110 1709223409
+!i10b 1
+!s100 3[n2iBS^cDjEPaRgk64k<2
+R2
+IBOIoDidM0PkQ?bj3Wmn1`3
+R3
+S1
+R0
+w1709221875
+8C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv
+FC:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv
+!i122 3
+L0 5 61
+R4
+r1
+!s85 0
+31
+!s108 1709223409.000000
+!s107 C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds|C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv|
+!i113 1
+R5
+R6
+R7
+n@p@w@m_@s@e@r@v@o_@c@o@n@t@r@o@l
+vPWM_SERVO_CONTROL_TB
+R1
+!s110 1709223419
+!i10b 1
+!s100 iReFWL=Td_d68OeEHlf8d2
+R2
+IJ83]U6f32`Co:FcgH8A;D3
+R3
+S1
+R0
+w1709201280
+8C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv
+FC:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv
+!i122 4
+L0 1 33
+R4
+r1
+!s85 0
+31
+!s108 1709223419.000000
+!s107 C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv|
+!i113 1
+o-work work
+R7
+n@p@w@m_@s@e@r@v@o_@c@o@n@t@r@o@l_@t@b
