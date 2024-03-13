@@ -1,6 +1,6 @@
 Analysis & Synthesis report for PROJ300_Edmonds
-Tue Mar 12 15:04:02 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Wed Mar 13 15:04:25 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -27,7 +27,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -44,27 +44,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 12 15:04:02 2024          ;
-; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                   ; PROJ300_Edmonds                                ;
-; Top-level Entity Name           ; Top                                            ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 57                                             ;
-; Total pins                      ; 14                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 1                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Mar 13 15:04:25 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; PROJ300_Edmonds                             ;
+; Top-level Entity Name           ; Top                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 57                                          ;
+; Total pins                      ; 15                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -159,27 +159,27 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 20          ;
-; Maximum allowed            ; 14          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 14          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-14        ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; Top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Top.bdf              ;         ;
-; PWM_SERVO_CONTROL.sv             ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv ;         ;
-; ANGLE_OUTPUT_UNIT.sv             ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; Top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Top.bdf              ;         ;
+; PWM_SERVO_CONTROL.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv ;         ;
+; ANGLE_OUTPUT_UNIT.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -198,14 +198,14 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 57             ;
 ;                                             ;                ;
-; I/O pins                                    ; 14             ;
+; I/O pins                                    ; 15             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 57             ;
-; Total fan-out                               ; 538            ;
-; Average fan-out                             ; 2.91           ;
+; Total fan-out                               ; 540            ;
+; Average fan-out                             ; 2.89           ;
 +---------------------------------------------+----------------+
 
 
@@ -214,7 +214,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name       ; Library Name ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-------------------+--------------+
-; |Top                         ; 99 (0)              ; 57 (0)                    ; 0                 ; 1          ; 14   ; 0            ; |Top                         ; Top               ; work         ;
+; |Top                         ; 99 (0)              ; 57 (0)                    ; 0                 ; 1          ; 15   ; 0            ; |Top                         ; Top               ; work         ;
 ;    |ANGLE_OUTPUT_UNIT:inst|  ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_OUTPUT_UNIT:inst  ; ANGLE_OUTPUT_UNIT ; work         ;
 ;    |PWM_SERVO_CONTROL:inst2| ; 95 (95)             ; 54 (54)                   ; 0                 ; 1          ; 0    ; 0            ; |Top|PWM_SERVO_CONTROL:inst2 ; PWM_SERVO_CONTROL ; work         ;
 +------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+-------------------+--------------+
@@ -343,7 +343,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;         5 data inputs ; 9                           ;
 ;         6 data inputs ; 21                          ;
 ; arriav_mac            ; 1                           ;
-; boundary_port         ; 14                          ;
+; boundary_port         ; 15                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.90                        ;
 ; Average LUT depth     ; 3.98                        ;
@@ -364,40 +364,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Mar 12 15:03:57 2024
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Mar 13 15:04:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
     Info (12023): Found entity 1: Top
 Info (12021): Found 1 design units, including 1 entities, in source file led_test.sv
-    Info (12023): Found entity 1: led_test File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/led_test.sv Line: 1
+    Info (12023): Found entity 1: led_test File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/led_test.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_servo_control.sv
-    Info (12023): Found entity 1: PWM_SERVO_CONTROL File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 5
+    Info (12023): Found entity 1: PWM_SERVO_CONTROL File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file angle_output_unit.sv
-    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 1
+    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file angle_output_unit_tb.sv
-    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw1" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw2" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw3" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw4" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw6" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw7" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw8" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ANGLE_OUTPUT_UNIT_TB.sv(16): created implicit net for "sw9" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 16
+    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT_TB File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file angle_pwm_combined_tb.sv
+    Info (12023): Found entity 1: ANGLE_PWM_COMBINED_TB File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at ANGLE_PWM_COMBINED_TB.sv(21): created implicit net for "servo1" File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at ANGLE_PWM_COMBINED_TB.sv(21): created implicit net for "servo2" File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at ANGLE_PWM_COMBINED_TB.sv(21): created implicit net for "servo3" File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at ANGLE_PWM_COMBINED_TB.sv(21): created implicit net for "servo4" File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 21
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Warning (275089): Not all bits in bus "GPIO_0[7..1]" are used
+Warning (275089): Not all bits in bus "GPIO_0[7..0]" are used
 Warning (275080): Converted elements in bus name "GPIO_0" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "GPIO_0[1]" to "GPIO_01"
-    Warning (275081): Converted element name(s) from "GPIO_0[3]" to "GPIO_03"
-    Warning (275081): Converted element name(s) from "GPIO_0[5]" to "GPIO_05"
     Warning (275081): Converted element name(s) from "GPIO_0[7]" to "GPIO_07"
+    Warning (275081): Converted element name(s) from "GPIO_0[3]" to "GPIO_03"
+    Warning (275081): Converted element name(s) from "GPIO_0[0]" to "GPIO_00"
+    Warning (275081): Converted element name(s) from "GPIO_0[1]" to "GPIO_01"
 Warning (275089): Not all bits in bus "SW[9..0]" are used
 Warning (275080): Converted elements in bus name "SW" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "SW[0]" to "SW0"
-    Warning (275081): Converted element name(s) from "SW[1]" to "SW1"
     Warning (275081): Converted element name(s) from "SW[2]" to "SW2"
     Warning (275081): Converted element name(s) from "SW[3]" to "SW3"
     Warning (275081): Converted element name(s) from "SW[4]" to "SW4"
@@ -405,32 +402,33 @@ Warning (275080): Converted elements in bus name "SW" using legacy naming rules.
     Warning (275081): Converted element name(s) from "SW[7]" to "SW7"
     Warning (275081): Converted element name(s) from "SW[8]" to "SW8"
     Warning (275081): Converted element name(s) from "SW[9]" to "SW9"
+    Warning (275081): Converted element name(s) from "SW[1]" to "SW1"
 Info (12128): Elaborating entity "PWM_SERVO_CONTROL" for hierarchy "PWM_SERVO_CONTROL:inst2"
-Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(30): can't check case statement for completeness because the case expression has too many possible states File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 30
+Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(30): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 30
 Info (12128): Elaborating entity "ANGLE_OUTPUT_UNIT" for hierarchy "ANGLE_OUTPUT_UNIT:inst"
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW6"
     Warning (15610): No output dependent on input pin "SW7"
     Warning (15610): No output dependent on input pin "SW8"
-Info (21057): Implemented 136 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 4 output pins
+    Info (21059): Implemented 5 output pins
     Info (21061): Implemented 121 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Tue Mar 12 15:04:02 2024
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4829 megabytes
+    Info: Processing ended: Wed Mar 13 15:04:25 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg.
+The suppressed messages can be found in C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg.
 
 
