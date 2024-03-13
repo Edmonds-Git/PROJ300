@@ -4,7 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "GPIO_01",
+					"name" : "GPIO_07",
 					"strict" : false
 				},
 				{
@@ -12,11 +12,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_05",
+					"name" : "GPIO_00",
 					"strict" : false
 				},
 				{
-					"name" : "GPIO_07",
+					"name" : "GPIO_01",
+					"strict" : false
+				},
+				{
+					"name" : "LEDR[9]",
 					"strict" : false
 				},
 				{
