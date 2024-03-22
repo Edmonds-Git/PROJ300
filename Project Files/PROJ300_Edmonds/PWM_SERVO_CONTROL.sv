@@ -45,9 +45,9 @@ module PWM_SERVO_CONTROL (
 		if(nextangle == 1'd1)
 			begin
 				timer_t1 <= 15'd27200 + angle1 *  10'd515;
-				timer_t2 <= 15'd27200 + angle1 *  10'd515;
-				timer_t3 <= 15'd27200 + angle1 *  10'd515;
-				timer_t4 <= 15'd27200 + angle1 *  10'd515;
+				timer_t2 <= 15'd27200 + angle2 *  10'd515;
+				timer_t3 <= 15'd27200 + angle3 *  10'd515;
+				timer_t4 <= 15'd27200 + angle4 *  10'd515;
 			end
 		else
 			begin
