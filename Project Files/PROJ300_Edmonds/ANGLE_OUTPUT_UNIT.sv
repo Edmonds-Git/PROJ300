@@ -20,38 +20,41 @@ module ANGLE_OUTPUT_UNIT (
 	
 	always_ff @(posedge clk) 
 		begin
-			if (switches == 4'b0000 && SW9 == 1)
-			//begin
+			if (switches == 4'b0000 && SW9 == 1) //top rotation
 				angle1 = 8'd0;
 			else if (switches == 4'b1111 && SW9 == 1)
 				angle1 = 8'd180; 
 			else if (switches == 4'b1100 && SW9 == 1)
 				angle1 = 8'd90;
-			//end
-			if (switches == 4'b0000 && SW8 == 1)
+		end
+	always_ff @(posedge clk) 
+		begin
+			if (switches == 4'b0000 && SW8 == 1)//top extension
 			//begin
 				angle2 = 8'd0;
 			else if (switches == 4'b1111 && SW8 == 1)
 				angle2 = 8'd180; 
 			else if (switches == 4'b1100 && SW8 == 1)
 				angle2 = 8'd90; 
-			//end
-			if (switches == 4'b0000 && SW7 == 1)
+		end
+	always_ff @(posedge clk) 
+		begin
+			if (switches == 4'b0000 && SW7 == 1) //bot rotation
 			//begin
 				angle3 = 8'd0;
 			else if (switches == 4'b1111 && SW7 == 1)
 				angle3 = 8'd180; 
 			else if (switches == 4'b1100 && SW7 == 1)
 				angle3 = 8'd90; 
-			//end
-			if (switches == 4'b0000 && SW6 == 1)
+		end
+	always_ff @(posedge clk) 
+		begin
+			if (switches == 4'b0000 && SW6 == 1)//bot extension
 			//begin
 				angle4 = 8'd0;
 			else if (switches == 4'b1111 && SW6 == 1)
 				angle4 = 8'd180; 
 			else if (switches == 4'b1100 && SW6 == 1)
-				angle4 = 8'd90; 
-			//end
+				angle4 = 8'd90;
 		end
 endmodule
-		
