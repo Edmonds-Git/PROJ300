@@ -1,5 +1,5 @@
 Fitter report for PROJ300_Edmonds
-Fri Mar 22 14:23:00 2024
+Thu Apr 11 17:14:10 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Mar 22 14:23:00 2024          ;
+; Fitter Status                   ; Successful - Thu Apr 11 17:14:10 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; PROJ300_Edmonds                                ;
 ; Top-level Entity Name           ; Top                                            ;
@@ -169,7 +169,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 7            ;   0.3%      ;
 ;     Processor 8            ;   0.3%      ;
 ;     Processor 9            ;   0.3%      ;
-;     Processor 10           ;   0.3%      ;
+;     Processor 10           ;   0.2%      ;
 ;     Processor 11           ;   0.2%      ;
 ;     Processor 12           ;   0.2%      ;
 ;     Processor 13           ;   0.2%      ;
@@ -2039,14 +2039,14 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 199 warnings
-    Info: Peak virtual memory: 7285 megabytes
-    Info: Processing ended: Fri Mar 22 14:23:00 2024
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:03:21
+    Info: Peak virtual memory: 7293 megabytes
+    Info: Processing ended: Thu Apr 11 17:14:10 2024
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:03:20
 
 
 +----------------------------+
