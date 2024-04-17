@@ -1,11 +1,11 @@
 //this module now finds the maximum Q value the next action and the reward, these will be used to break down the update Q function into multiple modules
 
-module UPDATE_Q (
+module MAXQ_REWARD (
 //output shortreal Q [36][4], // Q will be updated in a different module
-	output shortreal max_Q,
+	output logic [31:0] max_Q,
 	output logic [2:0] action,
 	output logic [3:0] reward,
-	input shortreal old_Q [36][4],
+	input logic  [31:0] old_Q [36][4],
 	input logic [5:0] maze_state);
 //	input shortreal learn_rate, //will be part of different module
 //	input shortreal discount_factor); //will be part of different module
@@ -13,7 +13,7 @@ module UPDATE_Q (
 	
 //	shortreal current_Q = old_Q(maze_state,0);
 //	shortreal current_Q[1][4] = {old_Q[maze_state][0], old_Q[maze_state][1],old_Q[maze_state][2],old_Q[maze_state][3]};
-	shortreal current_Q[1][4] = old_Q[maze_state];
+	logic [31:0] current_Q[1][4] = old_Q[maze_state];
 	always_comb
 	begin
 		if (current_Q[0] > current_Q[1] && current_Q[0] > current_Q[2] && current_Q[0] > current_Q[3])
