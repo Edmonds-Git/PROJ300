@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PROJ300_Edmonds
-Thu Apr 11 17:13:37 2024
+Sun Apr 21 18:49:33 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Apr 11 17:13:37 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sun Apr 21 18:49:33 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; PROJ300_Edmonds                                ;
 ; Top-level Entity Name           ; Top                                            ;
@@ -324,7 +324,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Apr 11 17:13:33 2024
+    Info: Processing started: Sun Apr 21 18:49:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -344,8 +344,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file angle_o
     Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file angle_pwm_combined_tb.sv
     Info (12023): Found entity 1: ANGLE_PWM_COMBINED_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file update_q.sv
-    Info (12023): Found entity 1: UPDATE_Q File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/UPDATE_Q.sv Line: 1
+Warning (12019): Can't analyze file -- file UPDATE_Q.sv is missing
+Warning (12019): Can't analyze file -- file DISCOUNT_X_MAXQ.sv is missing
 Warning (10236): Verilog HDL Implicit Net warning at ANGLE_PWM_COMBINED_TB.sv(21): created implicit net for "servo1" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 21
 Warning (10236): Verilog HDL Implicit Net warning at ANGLE_PWM_COMBINED_TB.sv(21): created implicit net for "servo2" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 21
 Warning (10236): Verilog HDL Implicit Net warning at ANGLE_PWM_COMBINED_TB.sv(21): created implicit net for "servo3" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 21
@@ -369,10 +369,10 @@ Info (21057): Implemented 373 device resources after synthesis - the final resou
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 351 logic cells
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Thu Apr 11 17:13:37 2024
-    Info: Elapsed time: 00:00:04
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Sun Apr 21 18:49:33 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:11
 
 
