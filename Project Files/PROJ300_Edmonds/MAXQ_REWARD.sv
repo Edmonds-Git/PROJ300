@@ -6,7 +6,9 @@ module MAXQ_REWARD (
 	output logic [2:0] action,
 	output logic [3:0] reward,
 	input logic  [31:0] old_Q [36][4],
-	input logic [5:0] maze_state);
+	input logic [5:0] maze_state,
+	input logic clk,
+	input logic rst);
 //	input shortreal learn_rate, //will be part of different module
 //	input shortreal discount_factor); //will be part of different module
 	
