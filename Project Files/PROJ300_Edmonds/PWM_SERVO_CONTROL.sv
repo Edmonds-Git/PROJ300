@@ -2,6 +2,13 @@
 //544μs = 0 degree, 2400μs = 180 degree.
 //Should be Roughly 10.3 μs difference per degree of angle
 //50MHz clk = period of 0.02μs 
+
+//new values
+//1000 = -90 1500 = 0 2000 = 90
+//5.5 μs per degree
+//minimum value = 1000*(5.5/0.02) = 275000
+//duty cycle = 275000 +(5.5/0.02)*angle
+//max value = 275000+(5.5/0.02)*180 = 324500
 module PWM_SERVO_CONTROL (
 	output logic servo1,
 	output logic servo2,
@@ -19,8 +26,12 @@ module PWM_SERVO_CONTROL (
 	logic [17:0]timer_t2;
 	logic [17:0]timer_t3;
 	logic [17:0]timer_t4;
+//	logic [19:0]timer_t1;
+//	logic [19:0]timer_t2;
+//	logic [19:0]timer_t3;
+//	logic [19:0]timer_t4;
 //	logic [16:0]Timer_C1;
-	logic [19:0]mxvlue = 20'd1000000; //prev value 17'd93244
+	logic [19:0]mxvlue = 20'd1000000; //prev value 17'd93244// = 20'd324500;// = 20'd1000000; //prev value 17'd93244
 	typedef int unsigned state_t1;
 	state_t1 state1;
 	state_t1 next_state1;
@@ -44,10 +55,14 @@ module PWM_SERVO_CONTROL (
 	begin
 		if(nextangle == 1'd1)
 			begin
-				timer_t1 <= 15'd27200 + angle1 *  10'd515;
-				timer_t2 <= 15'd27200 + angle2 *  10'd515;
-				timer_t3 <= 15'd27200 + angle3 *  10'd515;
-				timer_t4 <= 15'd27200 + angle4 *  10'd515;
+				timer_t1 <= 15'd27200 + angle1 *  10'd515;//20'd275000 + angle1 * 9'd275; //15'd27200 + angle1 *  10'd515;
+				timer_t2 <= 15'd27200 + angle2 *  10'd515;//20'd275000 + angle2 * 9'd275; //15'd27200 + angle2 *  10'd515;
+				timer_t3 <= 15'd27200 + angle3 *  10'd515; //20'd275000 + angle3 * 9'd275; //15'd27200 + angle3 *  10'd515;
+				timer_t4 <= 15'd27200 + angle4 *  10'd515;//20'd275000 + angle4 * 9'd275; //15'd27200 + angle4 *  10'd515;
+				servo1 = 1;
+				servo2 = 1;
+				servo3 = 1;
+				servo4 = 1;
 			end
 		else
 			begin
