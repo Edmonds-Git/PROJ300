@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -35,6 +35,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -88 96 -32 120))
 )
 (pin
 	(input)
@@ -51,6 +52,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -304 232 -240 256))
 )
 (pin
 	(input)
@@ -67,6 +69,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -304 272 -240 296))
 )
 (pin
 	(input)
@@ -83,6 +86,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -304 312 -240 336))
 )
 (pin
 	(input)
@@ -99,6 +103,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -304 352 -240 376))
 )
 (pin
 	(input)
@@ -115,6 +120,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -312 392 -240 416))
 )
 (pin
 	(input)
@@ -131,6 +137,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -312 472 -240 496))
 )
 (pin
 	(input)
@@ -147,6 +154,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -312 512 -240 536))
 )
 (pin
 	(input)
@@ -163,6 +171,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -312 552 -240 576))
 )
 (pin
 	(input)
@@ -179,6 +188,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -312 592 -240 616))
 )
 (pin
 	(input)
@@ -195,6 +205,39 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -312 432 -240 456))
+)
+(pin
+	(input)
+	(rect 80 520 248 536)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "maze_state" (rect 5 0 62 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 80 560 248 576)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "action" (rect 5 0 34 17)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
@@ -211,6 +254,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 928 224 992 248))
 )
 (pin
 	(output)
@@ -227,6 +271,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 928 264 992 288))
 )
 (pin
 	(output)
@@ -243,6 +288,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 928 304 992 328))
 )
 (pin
 	(output)
@@ -259,6 +305,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 928 184 992 208))
 )
 (pin
 	(output)
@@ -275,6 +322,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 936 392 1000 416))
 )
 (pin
 	(output)
@@ -291,6 +339,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 936 432 1000 456))
 )
 (pin
 	(output)
@@ -307,6 +356,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 936 472 1000 496))
 )
 (symbol
 	(rect 344 144 520 288)
@@ -358,28 +408,28 @@ https://fpgasoftware.intel.com/eula.
 		(pt 176 32)
 		(output)
 		(text "servo1" (rect 0 0 34 12)(font "Arial" ))
-		(text "servo1" (rect 127 27 155 39)(font "Arial" ))
+		(text "servo1" (rect 127 27 161 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32))
 	)
 	(port
 		(pt 176 48)
 		(output)
 		(text "servo2" (rect 0 0 34 12)(font "Arial" ))
-		(text "servo2" (rect 127 43 155 55)(font "Arial" ))
+		(text "servo2" (rect 127 43 161 55)(font "Arial" ))
 		(line (pt 176 48)(pt 160 48))
 	)
 	(port
 		(pt 176 64)
 		(output)
 		(text "servo3" (rect 0 0 34 12)(font "Arial" ))
-		(text "servo3" (rect 127 59 155 71)(font "Arial" ))
+		(text "servo3" (rect 127 59 161 71)(font "Arial" ))
 		(line (pt 176 64)(pt 160 64))
 	)
 	(port
 		(pt 176 80)
 		(output)
 		(text "servo4" (rect 0 0 34 12)(font "Arial" ))
-		(text "servo4" (rect 127 75 155 87)(font "Arial" ))
+		(text "servo4" (rect 127 75 161 87)(font "Arial" ))
 		(line (pt 176 80)(pt 160 80))
 	)
 	(drawing
@@ -457,28 +507,28 @@ https://fpgasoftware.intel.com/eula.
 		(pt 168 32)
 		(output)
 		(text "angle1[7..0]" (rect 0 0 57 12)(font "Arial" ))
-		(text "angle1[7..0]" (rect 99 27 147 39)(font "Arial" ))
+		(text "angle1[7..0]" (rect 99 27 156 39)(font "Arial" ))
 		(line (pt 168 32)(pt 152 32)(line_width 3))
 	)
 	(port
 		(pt 168 48)
 		(output)
 		(text "angle2[7..0]" (rect 0 0 57 12)(font "Arial" ))
-		(text "angle2[7..0]" (rect 99 43 147 55)(font "Arial" ))
+		(text "angle2[7..0]" (rect 99 43 156 55)(font "Arial" ))
 		(line (pt 168 48)(pt 152 48)(line_width 3))
 	)
 	(port
 		(pt 168 64)
 		(output)
 		(text "angle3[7..0]" (rect 0 0 57 12)(font "Arial" ))
-		(text "angle3[7..0]" (rect 99 59 147 71)(font "Arial" ))
+		(text "angle3[7..0]" (rect 99 59 156 71)(font "Arial" ))
 		(line (pt 168 64)(pt 152 64)(line_width 3))
 	)
 	(port
 		(pt 168 80)
 		(output)
 		(text "angle4[7..0]" (rect 0 0 57 12)(font "Arial" ))
-		(text "angle4[7..0]" (rect 99 75 147 87)(font "Arial" ))
+		(text "angle4[7..0]" (rect 99 75 156 87)(font "Arial" ))
 		(line (pt 168 80)(pt 152 80)(line_width 3))
 	)
 	(drawing
@@ -641,11 +691,7 @@ https://fpgasoftware.intel.com/eula.
 	(pt 520 224)
 )
 (connector
-	(pt 136 88)
-	(pt 144 88)
-)
-(connector
-	(text "CLK" (rect 138 72 158 89)(font "Intel Clear" ))
+	(text "CLK" (rect 154 72 174 89)(font "Intel Clear" ))
 	(pt 144 88)
 	(pt 176 88)
 )
@@ -739,7 +785,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt -64 424)
 	(pt -32 424)
 )
-(junction (pt 144 88))
 (junction (pt -64 464))
 (junction (pt -64 504))
 (junction (pt -64 544))
