@@ -2,6 +2,7 @@ module BLOCKED_STATES(
 	output logic [31:0] new_Q[37][4], //I forgot to start at 0 when writing the state machine so to save time I'm just adding an extra value to the array
 	output logic [5:0] start_state,
 	output logic [5:0] blocked[16],
+	output logic [5:0] target_state,
 	input logic [31:0] old_Q [37][4],
 	input logic clk,
 	input logic rst); 
@@ -16,6 +17,7 @@ module BLOCKED_STATES(
 	begin
 		new_Q = old_Q; //start with new Q equal to old Q
 		blocked = '{3,9,11,13,15,17,26,28,30,32,34,0,0,0,0,0}; 
+		target_state = 36;
 		for (int i = 0; i < $size(blocked); i++) //repeat as many times as there are blocked states
 		begin
 			case (blocked[i])
@@ -61,6 +63,7 @@ module BLOCKED_STATES(
 				6'd34:begin new_Q[28][0] = 0;  new_Q[27][1] = 0;                    new_Q[35][3] = 0; end
 				6'd35:begin new_Q[29][0] = 0;  new_Q[28][1] = 0;                    new_Q[36][3] = 0; end
 				6'd36:begin new_Q[30][0] = 0;  new_Q[29][1] = 0;                                      end
+				default:new_Q = new_Q;
 			endcase
 		end
 	end

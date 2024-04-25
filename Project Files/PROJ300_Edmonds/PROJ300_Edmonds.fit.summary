@@ -1,13 +1,13 @@
-Fitter Status : Successful - Wed Apr 24 18:47:12 2024
+Fitter Status : Successful - Thu Apr 25 19:32:07 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PROJ300_Edmonds
 Top-level Entity Name : Top
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 173 / 18,480 ( < 1 % )
-Total registers : 52
-Total pins : 20 / 224 ( 9 % )
+Logic utilization (in ALMs) : 175 / 18,480 ( < 1 % )
+Total registers : 66
+Total pins : 18 / 224 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
 Total RAM Blocks : 0 / 308 ( 0 % )

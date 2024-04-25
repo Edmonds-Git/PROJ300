@@ -479,6 +479,17 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
 set_global_assignment -name BOARD "DE0-CV Development Board"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE Q_TRIAL.sv
+set_global_assignment -name VERILOG_FILE Q_LEARN_V2_inst.v
+set_global_assignment -name SYSTEMVERILOG_FILE Q_LEARN_V2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE NEW_Q.sv
+set_global_assignment -name SYSTEMVERILOG_FILE MAXQ_REWARD.sv
+set_global_assignment -name SYSTEMVERILOG_FILE INIT_Q.sv
+set_global_assignment -name SYSTEMVERILOG_FILE BLOCKED_STATES.sv
 set_global_assignment -name VERILOG_FILE PROJ300_Edmonds.v
 set_global_assignment -name SYSTEMVERILOG_FILE PWM_SERVO_CONTROL_TB.sv
 set_global_assignment -name SDC_FILE PROJ300_Edmonds.SDC
@@ -488,15 +499,3 @@ set_global_assignment -name SYSTEMVERILOG_FILE PWM_SERVO_CONTROL.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ANGLE_OUTPUT_UNIT.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ANGLE_OUTPUT_UNIT_TB.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ANGLE_PWM_COMBINED_TB.sv
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name SYSTEMVERILOG_FILE UPDATE_Q.sv
-set_global_assignment -name SYSTEMVERILOG_FILE DISCOUNT_X_MAXQ.sv
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_simulation
-set_global_assignment -name SYSTEMVERILOG_FILE BLOCKED_STATES.sv
-set_global_assignment -name BDF_FILE Q_Learn.bdf
-set_global_assignment -name SYSTEMVERILOG_FILE INIT_Q.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Q_EPISODE_COUNT.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Q_TRIAL.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Q_E_COUNT_INIT.sv
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
