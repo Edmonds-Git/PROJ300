@@ -134,10 +134,10 @@ module ANGLE_OUTPUT_UNIT (
 //		begin
 //			if (switches == 4'b1111 && SW9 == 1)  //maze_state  1
 //			begin
-//				angle1 = 8'd60;//bot extension
+//				angle1 = 8'd30;//bot extension
 //				angle2 = 8'd60;//bot rotation
-//				angle3 = 8'd30;//top extension
-//				angle4 = 8'd110;//end rotation
+//				angle3 = 8'd34;//top extension
+//				angle4 = 8'd10;//end rotation
 //			end
 //			else if (switches == 4'b1111 && SW8 == 1) //2
 //			begin
