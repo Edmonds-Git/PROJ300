@@ -1,5 +1,5 @@
 module ANGLE_DECODE(
-	input logic[7:0]angle1,
+	input logic [7:0]angle1,
 	input logic [7:0]angle2,
 	input logic [7:0]angle3,
 	input logic [7:0]angle4,
