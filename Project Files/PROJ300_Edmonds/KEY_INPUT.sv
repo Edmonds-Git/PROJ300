@@ -22,22 +22,22 @@ module KEY_INPUT(
 	begin
 			if (KEY0 == 0)
 			begin
-				if (switches == 4'b1000 && (angle1 < 8'd180)) //1
+				if (switches == 4'b1000 && (angle1 < 8'd180) && angle_1 == angle1) //1
 				begin
 					angle_1 <= angle1+4'd1;
 				//	angle1 <= angle_1;
 				end
-				else if (switches == 4'b0100 && (angle2 < 8'd180)) //2
+				else if (switches == 4'b0100 && (angle2 < 8'd180) && angle_2 == angle2) //2
 				begin
 					angle_2 <= angle2+4'd1;
 				//	angle2 <= angle2;
 				end
-				else if (switches == 4'b0010 && (angle3 < 8'd180)) //3
+				else if (switches == 4'b0010 && (angle3 < 8'd180) && angle_3 == angle3) //3
 				begin
 					angle_3 <= angle3+4'd1;
 					//angle3<= angle_3;
 				end
-				else if (switches == 4'b0001 && (angle4 < 8'd180)) //4
+				else if (switches == 4'b0001 && (angle4 < 8'd180) && angle_4 == angle4) //4
 				begin
 					angle_4 <= angle4+4'd1;
 				//	angle4 <= angle_4;
@@ -46,40 +46,76 @@ module KEY_INPUT(
 			
 			else if (KEY3 == 0)
 			begin
-				if (switches == 4'b1000 && (angle1 > 8'd0)) //1
+				if (switches == 4'b1000 && (angle1 > 8'd0) && angle_1 == angle1) //1
 				begin
 					angle_1 <= angle1-4'd1;
 					//angle1 <= angle_1;
 				end
-				else if (switches == 4'b0100 && (angle2 > 8'd0)) //2
+				else if (switches == 4'b0100 && (angle2 > 8'd0) && angle_2 == angle2) //2
 				begin
 					angle_2 <= angle2-4'd1;
 					//angle2 <= angle2;
 				end
-				else if (switches == 4'b0010 && (angle3 > 8'd0)) //3
+				else if (switches == 4'b0010 && (angle3 > 8'd0) && angle_3 == angle3) //3
 				begin
 					angle_3 <= angle3-4'd1;
 					//angle3<= angle_3;
 				end
-				else if (switches == 4'b0001 && (angle4 > 8'd0)) //4
+				else if (switches == 4'b0001 && (angle4 > 8'd0) && angle_4 == angle4) //4
 				begin
 					angle_4 <= angle4-4'd1;
 					//angle4 <= angle_4;
 				end
 			end
-			else if (KEY1 == 0)
+			else if (KEY1 == 0 && KEY0 == 1 && KEY3 ==1) 
 			begin
-				angle_1 <= 8'd90;
-				angle_2 <= 8'd90;
-				angle_3 <= 8'd90;
-				angle_4 <= 8'd90;
+				if (switches == 4'b1000 && angle_1 == angle1) //1
+				begin
+					angle_1 <= 8'd0;
+					//angle1 <= angle_1;
+				end
+				else if (switches == 4'b0100 && angle_2 == angle2) //2
+				begin
+					angle_2 <= 8'd0;
+					//angle2 <= angle2;
+				end
+				else if (switches == 4'b0010 && angle_3 == angle3) //3
+				begin
+					angle_3 <= 8'd0;
+					//angle3<= angle_3;
+				end
+				else if (switches == 4'b0001 && angle_4 == angle4) //4
+				begin
+					angle_4 <= 8'd0;
+					//angle4 <= angle_4;
+				end
 			end
 			else
 			begin 
-				angle_1 <= angle_1;
-				angle_2 <= angle_2;
-				angle_3 <= angle_3;
-				angle_4 <= angle_4;
+			if (switches == 4'b1000 && angle_1 == angle1) //1
+				begin
+					angle_1 <= angle_1;
+					//angle1 <= angle_1;
+				end
+				else if (switches == 4'b0100 && angle_2 == angle2) //2
+				begin
+					angle_2 <= angle_2;
+					//angle2 <= angle2;
+				end
+				else if (switches == 4'b0010 && angle_3 == angle3) //3
+				begin
+					angle_3 <= angle_3;
+					//angle3<= angle_3;
+				end
+				else if (switches == 4'b0001 && angle_4 == angle4) //4
+				begin
+					angle_4 <= angle_4;
+					//angle4 <= angle_4;
+				end
+//				angle_1 <= angle_1;
+//				angle_2 <= angle_2;
+//				angle_3 <= angle_3;
+//				angle_4 <= angle_4;
 			end
 	end
 //	
