@@ -128,7 +128,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[1]",
+					"name" : "RESET_N",
 					"strict" : false
 				},
 				{

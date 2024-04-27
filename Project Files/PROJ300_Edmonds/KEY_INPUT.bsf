@@ -34,8 +34,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 48)
 		(input)
-		(text "KEY1" (rect 0 0 24 12)(font "Arial" ))
-		(text "KEY1" (rect 21 43 45 55)(font "Arial" ))
+		(text "KEY4" (rect 0 0 27 12)(font "Arial" ))
+		(text "KEY4" (rect 21 43 48 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port

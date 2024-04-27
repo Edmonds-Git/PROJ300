@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PROJ300_Edmonds
-Sat Apr 27 12:52:58 2024
+Sat Apr 27 14:39:47 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -66,14 +66,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Apr 27 12:52:58 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sat Apr 27 14:39:47 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PROJ300_Edmonds                             ;
 ; Top-level Entity Name           ; Top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 280                                         ;
-; Total pins                      ; 43                                          ;
+; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 4                                           ;
@@ -227,25 +227,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 557            ;
+; Estimate of Logic utilization (ALMs needed) ; 562            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1025           ;
+; Combinational ALUT usage for logic          ; 1033           ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 56             ;
-;     -- 5 input functions                    ; 61             ;
-;     -- 4 input functions                    ; 108            ;
-;     -- <=3 input functions                  ; 799            ;
+;     -- 6 input functions                    ; 59             ;
+;     -- 5 input functions                    ; 66             ;
+;     -- 4 input functions                    ; 116            ;
+;     -- <=3 input functions                  ; 791            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 280            ;
 ;                                             ;                ;
-; I/O pins                                    ; 43             ;
+; I/O pins                                    ; 44             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 4              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 280            ;
-; Total fan-out                               ; 3884           ;
-; Average fan-out                             ; 2.78           ;
+; Total fan-out                               ; 3967           ;
+; Average fan-out                             ; 2.82           ;
 +---------------------------------------------+----------------+
 
 
@@ -254,8 +254,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Top                                      ; 1025 (1)            ; 280 (0)                   ; 0                 ; 4          ; 43   ; 0            ; |Top                                                                                                                     ; Top                 ; work         ;
-;    |ANGLE_DECODE:inst4|                   ; 703 (19)            ; 108 (108)                 ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4                                                                                                  ; ANGLE_DECODE        ; work         ;
+; |Top                                      ; 1033 (1)            ; 280 (0)                   ; 0                 ; 4          ; 44   ; 0            ; |Top                                                                                                                     ; Top                 ; work         ;
+;    |ANGLE_DECODE:inst4|                   ; 700 (16)            ; 108 (108)                 ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4                                                                                                  ; ANGLE_DECODE        ; work         ;
 ;       |lpm_divide:Div0|                   ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Div0                                                                                  ; lpm_divide          ; work         ;
 ;          |lpm_divide_8am:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Div0|lpm_divide_8am:auto_generated                                                    ; lpm_divide_8am      ; work         ;
 ;             |sign_div_unsign_ekh:divider| ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Div0|lpm_divide_8am:auto_generated|sign_div_unsign_ekh:divider                        ; sign_div_unsign_ekh ; work         ;
@@ -336,7 +336,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_82m:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Mod9|lpm_divide_82m:auto_generated                                                    ; lpm_divide_82m      ; work         ;
 ;             |sign_div_unsign_bkh:divider| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Mod9|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                        ; sign_div_unsign_bkh ; work         ;
 ;                |alt_u_div_sse:divider|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Mod9|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider  ; alt_u_div_sse       ; work         ;
-;    |KEY_INPUT:inst1|                      ; 75 (75)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|KEY_INPUT:inst1                                                                                                     ; KEY_INPUT           ; work         ;
+;    |KEY_INPUT:inst1|                      ; 86 (86)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|KEY_INPUT:inst1                                                                                                     ; KEY_INPUT           ; work         ;
 ;    |LED_7seg:inst3|                       ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|LED_7seg:inst3                                                                                                      ; LED_7seg            ; work         ;
 ;    |PWM_SERVO_CONTROL:inst2|              ; 225 (225)           ; 108 (108)                 ; 0                 ; 4          ; 0    ; 0            ; |Top|PWM_SERVO_CONTROL:inst2                                                                                             ; PWM_SERVO_CONTROL   ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
@@ -361,8 +361,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 280   ;
-; Number of registers using Synchronous Clear  ; 64    ;
-; Number of registers using Synchronous Load   ; 16    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 48    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 244   ;
@@ -370,17 +370,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 16:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |Top|ANGLE_DECODE:inst4|angle_out[4] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_1[1]      ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_2[2]      ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_3[3]      ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_4[6]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_1[7]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_1[3]       ;
+; 16:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |Top|ANGLE_DECODE:inst4|angle_out[10] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_2[3]       ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_2[7]       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_3[3]       ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_3[7]       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_4[3]       ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_4[0]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -850,11 +854,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 280                         ;
 ;     ENA               ; 196                         ;
-;     ENA SCLR          ; 32                          ;
-;     ENA SLD           ; 16                          ;
+;     ENA SLD           ; 48                          ;
 ;     SCLR              ; 32                          ;
 ;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 1028                        ;
+; arriav_lcell_comb     ; 1036                        ;
 ;     arith             ; 496                         ;
 ;         0 data inputs ; 108                         ;
 ;         1 data inputs ; 156                         ;
@@ -863,19 +866,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 32                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 419                         ;
+;     normal            ; 427                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 141                         ;
-;         3 data inputs ; 73                          ;
-;         4 data inputs ; 76                          ;
-;         5 data inputs ; 61                          ;
-;         6 data inputs ; 56                          ;
+;         2 data inputs ; 134                         ;
+;         3 data inputs ; 72                          ;
+;         4 data inputs ; 84                          ;
+;         5 data inputs ; 66                          ;
+;         6 data inputs ; 59                          ;
 ;     shared            ; 112                         ;
 ;         0 data inputs ; 36                          ;
 ;         1 data inputs ; 76                          ;
 ; arriav_mac            ; 4                           ;
-; boundary_port         ; 43                          ;
+; boundary_port         ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.20                       ;
 ; Average LUT depth     ; 6.32                        ;
@@ -897,7 +900,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 27 12:52:49 2024
+    Info: Processing started: Sat Apr 27 14:39:37 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -997,22 +1000,23 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]"
     Warning (15610): No output dependent on input pin "SW[8]"
     Warning (15610): No output dependent on input pin "SW[7]"
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[5]"
     Warning (15610): No output dependent on input pin "KEY[2]"
-Info (21057): Implemented 1224 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 15 input pins
+    Warning (15610): No output dependent on input pin "KEY[1]"
+Info (21057): Implemented 1233 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 1177 logic cells
+    Info (21061): Implemented 1185 logic cells
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4905 megabytes
-    Info: Processing ended: Sat Apr 27 12:52:58 2024
-    Info: Elapsed time: 00:00:09
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 4893 megabytes
+    Info: Processing ended: Sat Apr 27 14:39:47 2024
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:14
 
 
