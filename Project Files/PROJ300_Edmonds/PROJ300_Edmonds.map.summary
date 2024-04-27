@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Apr 27 14:39:47 2024
+Analysis & Synthesis Status : Successful - Sat Apr 27 16:00:49 2024
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PROJ300_Edmonds
 Top-level Entity Name : Top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 280
+Total registers : 223
 Total pins : 44
 Total virtual pins : 0
 Total block memory bits : 0

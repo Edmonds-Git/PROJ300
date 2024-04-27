@@ -128,15 +128,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "RESET_N",
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
+					"name" : "SW[6]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[0]",
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
 					"strict" : false
 				}
 			]

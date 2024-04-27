@@ -1,0 +1,10 @@
+module led_test(
+	
+			input logic switch,
+			output logic led
+		
+		);
+
+		assign led = switch;
+		
+endmodule
