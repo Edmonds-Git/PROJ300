@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds_tmp_archive.qarlog
+
+Archive:	C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds_tmp_archive.qar
+Date:		Sat Apr 27 15:25:42 2024
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/KEY_INPUT.sv
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/LED_7seg.v
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.SDC
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.qpf
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.qsf
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.sdc
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.v
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds_assignment_defaults.qdf
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/Top.bdf
+C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/led_test.sv
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sat Apr 27 15:25:43 2024
+Source archive file:	C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds_tmp_archive.qar
+Archive was extracted into	C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/
+		 - successfully.

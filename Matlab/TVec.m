@@ -31,6 +31,16 @@ elseif i == 4
     ai = a(4);
     di = d(4);
     ri = r(4);
+elseif i == 5 
+    qi = q(5);
+    ai = a(5);
+    di = d(5);
+    ri = r(5);
+elseif i == 6 
+    qi = q(6);
+    ai = a(6);
+    di = d(6);
+    ri = r(6);
 end
 
 M1 = [cos(qi),-cos(ai)*sin(qi),sin(ai)*sin(qi),ri*cos(qi)];
