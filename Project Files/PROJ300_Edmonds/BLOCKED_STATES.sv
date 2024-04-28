@@ -8,16 +8,20 @@ module BLOCKED_STATES(
 	input logic rst); 
 	
 //for reference 0 = N, 1 = E, 2 = S, 3 = W
-//	logic [5:0] blocked [16] = '{3,9,11,13,15,17,26,28,30,32,34,0,0,0,0,0}; // fill unused values with 0, limited to 16 values as dynamic arrays typically aren't synthesizable
-//	initial
-//	begin
-//		blocked = '{3,9,11,13,15,17,26,28,30,32,34,0,0,0,0,0}; //write blocked states in here
-//	end
+///////////////////////////////List Of mazes///////////////////////////////
+//maze 1
+//		blocked = '{3,9,11,13,15,17,26,28,30,32,34,0,0,0,0,0}; 
+//		target_state = 36;
+//		start_state = 1;
+//maze 2
+//
+/////////////////////////////////////////////////////////////////////////
 	always @(posedge clk or posedge rst)
 	begin
 		new_Q = old_Q; //start with new Q equal to old Q
-		blocked = '{3,9,11,13,15,17,26,28,30,32,34,0,0,0,0,0}; 
+		blocked = '{7,8,9,11,13,15,17,26,28,30,32,34,0,0,0,0}; 
 		target_state = 36;
+		start_state = 1;
 		for (int i = 0; i < $size(blocked); i++) //repeat as many times as there are blocked states
 		begin
 			case (blocked[i])

@@ -27,7 +27,7 @@ module NEW_Q(
 //	assign maze_state = 6'd5;
 //	assign action = 3'd2;
 //	assign reward = 32'd10;
-	always @(old_Q or rst)
+	always @(old_Q)
 	begin
 		//convert back to 32 bit Q7.24
 		//not actually needed for now

@@ -3,6 +3,9 @@ module ANGLE_OUTPUT_UNIT (
 	output logic [7:0]angle2,
 	output logic [7:0]angle3,
 	output logic [7:0]angle4,
+	output logic move_complete,
+	output logic t_restart,
+	output logic [5:0]maze_state,
 	input logic clk,
 	input logic SW1,
 	input logic SW2,
@@ -11,15 +14,74 @@ module ANGLE_OUTPUT_UNIT (
 	input logic SW6,
 	input logic SW7,
 	input logic SW8,
-	input logic SW9);
-//	input logic [3:0]action,
-//	input logic [5:0]maze_state);
+	input logic SW9,
+	input logic rdy,
+	input logic [5:0]next_state);
 	
 	logic [3:0] switches;
+	logic [3:0] next_move;
 	//logic [3:0] angleswitch;
 	assign switches = {SW1,SW2,SW3,SW4};
 	//assign angleswitch = {SW6,SW7,SW8,SW9};
-	
+	always_ff@(posedge rdy)
+	begin
+		t_restart = 0;
+		case(next_move)
+			1:
+			begin
+				next_move = 2;
+				move_complete = 0;
+//				t_restart = 1;
+			end
+			2:
+			begin
+				next_move = 3;
+				move_complete = 0;
+//				t_restart = 1;
+			end
+			3:
+			begin
+				next_move = 4;
+				move_complete = 0;
+//				t_restart = 1;
+			end
+			4:
+			begin 
+				next_move = 1;
+				move_complete = 1;
+				maze_state = next_state;
+			end
+		endcase
+	end
+////////////////////// Idea /////////////////////////
+	//for reference 0 = N, 1 = E, 2 = S, 3 = W
+	always_ff @(posedge clk)
+	begin
+		case (next_state)
+			6'd1:
+			begin
+				angle1 = (next_move == 1) ? 8'd10 : angle1;//bot extension
+				angle2 = (next_move == 2) ? 8'd10 : angle2;//bot rotation
+				angle3 = (next_move == 3) ? 8'd10 : angle3;//top extension
+				angle4 = (next_move == 4) ? 8'd10 : angle4;//end rotation
+			end
+			6'd2:
+			begin
+				angle1 = (next_move == 1) ? 8'd160 : angle1;//bot extension
+				angle2 = (next_move == 2) ? 8'd160 : angle2;//bot rotation
+				angle3 = (next_move == 3) ? 8'd10 : angle3;//top extension
+				angle4 = (next_move == 4) ? 8'd160 : angle4;//end rotation
+			end
+			default:
+			begin
+				angle1 = (next_move == 1) ? 8'd10 : angle1;//bot extension
+				angle2 = (next_move == 2) ? 8'd90 : angle2;//bot rotation
+				angle3 = (next_move == 3) ? 8'd10 : angle3;//top extension
+				angle4 = (next_move == 4) ? 8'd10 : angle4;//end rotation
+			end
+		///etc
+		endcase
+	end
 ////////////////True Angles/////////////// 
 	//for reference 0 = N, 1 = E, 2 = S, 3 = W
 //	always_ff @(posedge clk)
@@ -130,58 +192,58 @@ module ANGLE_OUTPUT_UNIT (
 //				angle4 = 8'd90;
 //		end
 ///////////////////First Row////////////////////////////
-	always_ff @(posedge clk) 
-		begin
-			if (switches == 4'b1111 && SW9 == 1)  //maze_state  1
-			begin
-				angle1 <= 8'd30;//bot extension
-				angle2 <= 8'd60;//bot rotation
-				angle3 <= 8'd34;//top extension
-				angle4 <= 8'd10;//end rotation
-			end
-			else if (switches == 4'b1111 && SW8 == 1) //2
-			begin
-				angle1 <= 8'd51;//bot extension
-				angle2 <= 8'd65;//bot rotation
-				angle3 <= 8'd65;//top extension
-				angle4 <= 8'd0;//end rotation
-			end
-			else if (switches == 4'b1111 && SW7 == 1) //3
-			begin
-				angle1 <= 8'd51;//bot extension
-				angle2 <= 8'd79;//bot rotation
-				angle3 <= 8'd60;//top extension
-				angle4 <= 8'd16;//end rotation
-			end
-			else if (switches == 4'b1111 && SW6 == 1) //4
-			begin
-				angle1 <= 8'd51;//bot extension
-				angle2 <= 8'd85;//bot rotation
-				angle3 <= 8'd60;//top extension
-				angle4 <= 8'd16;//end rotation
-			end
-			else if (switches == 4'b0111 && SW7 == 1) //5
-			begin
-				angle1 <= 8'd49;//bot extension
-				angle2 <= 8'd96;//bot rotation
-				angle3 <= 8'd60;//top extension
-				angle4 <= 8'd16;//end rotation
-			end
-			else if (switches == 4'b0011 && SW7 == 1) //6
-			begin
-				angle1 <= 8'd60;//bot extension
-				angle2 <= 8'd120;//bot rotation
-				angle3 <= 8'd35;//top extension
-				angle4 <= 8'd110;//end rotation
-			end
-			else
-			begin
-				angle1 <= angle1;
-				angle2 <= angle2;
-				angle3 <= angle3;
-				angle4 <= angle4;
-			end
-		end
+//	always_ff @(posedge clk) 
+//		begin
+//			if (switches == 4'b1111 && SW9 == 1)  //maze_state  1
+//			begin
+//				angle1 <= 8'd30;//bot extension
+//				angle2 <= 8'd60;//bot rotation
+//				angle3 <= 8'd34;//top extension
+//				angle4 <= 8'd10;//end rotation
+//			end
+//			else if (switches == 4'b1111 && SW8 == 1) //2
+//			begin
+//				angle1 <= 8'd51;//bot extension
+//				angle2 <= 8'd65;//bot rotation
+//				angle3 <= 8'd65;//top extension
+//				angle4 <= 8'd0;//end rotation
+//			end
+//			else if (switches == 4'b1111 && SW7 == 1) //3
+//			begin
+//				angle1 <= 8'd51;//bot extension
+//				angle2 <= 8'd79;//bot rotation
+//				angle3 <= 8'd60;//top extension
+//				angle4 <= 8'd16;//end rotation
+//			end
+//			else if (switches == 4'b1111 && SW6 == 1) //4
+//			begin
+//				angle1 <= 8'd51;//bot extension
+//				angle2 <= 8'd85;//bot rotation
+//				angle3 <= 8'd60;//top extension
+//				angle4 <= 8'd16;//end rotation
+//			end
+//			else if (switches == 4'b0111 && SW7 == 1) //5
+//			begin
+//				angle1 <= 8'd49;//bot extension
+//				angle2 <= 8'd96;//bot rotation
+//				angle3 <= 8'd60;//top extension
+//				angle4 <= 8'd16;//end rotation
+//			end
+//			else if (switches == 4'b0011 && SW7 == 1) //6
+//			begin
+//				angle1 <= 8'd60;//bot extension
+//				angle2 <= 8'd120;//bot rotation
+//				angle3 <= 8'd35;//top extension
+//				angle4 <= 8'd110;//end rotation
+//			end
+//			else
+//			begin
+//				angle1 <= angle1;
+//				angle2 <= angle2;
+//				angle3 <= angle3;
+//				angle4 <= angle4;
+//			end
+//		end
 /////////////////Row 2////////////////////////////
 //	always_ff @(posedge clk) 
 //		begin

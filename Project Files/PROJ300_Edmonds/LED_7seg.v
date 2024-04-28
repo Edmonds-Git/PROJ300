@@ -6,12 +6,14 @@
 module LED_7seg(
 	 input [11:0] Data_in,
 	 input clk,
-	 output [6:0] seg_H, seg_M, seg_L
+	 input target_reached,
+	 output [6:0] seg_H, seg_M, seg_L, seg_t
 );
 
 reg [6:0] SevenSeg_H;
 reg [6:0] SevenSeg_M;
 reg [6:0] SevenSeg_L;
+reg [6:0] sevenseg_t;
 
 always @(*)
 begin
@@ -74,11 +76,15 @@ begin
 	 4'hf: SevenSeg_H = 7'b0111000;		//F
 	 
 	endcase
-
+	case(target_reached)
+	1: sevenseg_t = 7'b1001111;
+	default:sevenseg_t = 7'b0000001;
+	endcase
 end
 
 assign {seg_H[0],seg_H[1],seg_H[2],seg_H[3],seg_H[4],seg_H[5],seg_H[6]} = SevenSeg_H;
 assign {seg_M[0],seg_M[1],seg_M[2],seg_M[3],seg_M[4],seg_M[5],seg_M[6]} = SevenSeg_M;
 assign {seg_L[0],seg_L[1],seg_L[2],seg_L[3],seg_L[4],seg_L[5],seg_L[6]} = SevenSeg_L;
+assign {seg_t[0],seg_t[1],seg_t[2],seg_t[3],seg_t[4],seg_t[5],seg_t[6]} = sevenseg_t;
 
 endmodule

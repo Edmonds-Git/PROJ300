@@ -16,7 +16,7 @@ module Q_TRIAL(
 //		new_count = episode_count + 1;
 //	end
 	
-	always_ff @(old_Q or rst)
+	always_ff @(posedge clk)
 		begin
 			if (maze_state == target_state)
 				next_state = start_state;
