@@ -4,11 +4,14 @@
 //50MHz clk = period of 0.02μs 
 
 //new values
-//1000 = -90 1500 = 0 2000 = 90
+//1000us = -90 1500us = 0 2000us = 90
 //5.5 μs per degree
-//minimum value = 1000*(5.5/0.02) = 275000
-//duty cycle = 275000 +(5.5/0.02)*angle
-//max value = 275000+(5.5/0.02)*180 = 324500
+//ms per deg = 500/90 = 5.5us
+//cycles per deg = 5.5 /0.02 = 275 cycles
+//-90 -= 1000/0.02 = 50000
+//minimum value = 50000+(5.5/0.02)*0 = 50000
+//duty cycle = 50000 +(5.5/0.02)*angle
+//max value = 50000n +(5.5/0.02)*180 = 324500
 module PWM_SERVO_CONTROL (
 	output logic servo1,
 	output logic servo2,
@@ -55,10 +58,10 @@ module PWM_SERVO_CONTROL (
 	begin
 		if(nextangle == 1'd1)
 			begin
-				timer_t1 <= 15'd27200 + angle1 *  10'd515;//20'd275000 + angle1 * 9'd275; //15'd27200 + angle1 *  10'd515;
-				timer_t2 <= 15'd27200 + angle2 *  10'd515;//20'd275000 + angle2 * 9'd275; //15'd27200 + angle2 *  10'd515;
-				timer_t3 <= 15'd27200 + angle3 *  10'd515; //20'd275000 + angle3 * 9'd275; //15'd27200 + angle3 *  10'd515;
-				timer_t4 <= 15'd27200 + angle4 *  10'd515;//20'd275000 + angle4 * 9'd275; //15'd27200 + angle4 *  10'd515;
+				timer_t1 <= 16'd50000 + angle1 * 10'd275;
+				timer_t2 <= 16'd50000 + angle2 * 10'd275;
+				timer_t3 <= 17'd50000 + angle3 * 10'd275;
+				timer_t4 <= 16'd50000 + angle4 * 10'd275;
 				state1 <= next_state1;
 				if (state1 > mxvlue-timer_t1)
 					servo1 <= 1;

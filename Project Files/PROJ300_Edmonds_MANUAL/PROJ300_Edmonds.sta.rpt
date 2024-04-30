@@ -1,5 +1,5 @@
 Timing Analyzer report for PROJ300_Edmonds
-Sat Apr 27 16:05:39 2024
+Tue Apr 30 18:53:18 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -101,24 +101,24 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
-; Average used               ; 1.82        ;
+; Average used               ; 1.92        ;
 ; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.0%      ;
-;     Processor 3            ;   6.9%      ;
-;     Processor 4            ;   6.7%      ;
-;     Processor 5            ;   6.4%      ;
-;     Processor 6            ;   6.4%      ;
-;     Processor 7            ;   6.4%      ;
-;     Processor 8            ;   6.4%      ;
-;     Processor 9            ;   6.3%      ;
-;     Processor 10           ;   6.0%      ;
-;     Processor 11           ;   6.0%      ;
-;     Processor 12           ;   6.0%      ;
-;     Processor 13           ;   6.0%      ;
-;     Processor 14           ;   6.0%      ;
+;     Processor 2            ;   7.7%      ;
+;     Processor 3            ;   7.6%      ;
+;     Processor 4            ;   7.6%      ;
+;     Processor 5            ;   7.2%      ;
+;     Processor 6            ;   7.2%      ;
+;     Processor 7            ;   7.2%      ;
+;     Processor 8            ;   7.1%      ;
+;     Processor 9            ;   7.1%      ;
+;     Processor 10           ;   6.7%      ;
+;     Processor 11           ;   6.7%      ;
+;     Processor 12           ;   6.7%      ;
+;     Processor 13           ;   6.7%      ;
+;     Processor 14           ;   6.7%      ;
 +----------------------------+-------------+
 
 
@@ -127,7 +127,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------+--------+--------------------------+
 ; SDC File Path       ; Status ; Read at                  ;
 +---------------------+--------+--------------------------+
-; PROJ300_Edmonds.SDC ; OK     ; Sat Apr 27 16:05:36 2024 ;
+; PROJ300_Edmonds.SDC ; OK     ; Tue Apr 30 18:53:15 2024 ;
 +---------------------+--------+--------------------------+
 
 
@@ -140,13 +140,13 @@ https://fpgasoftware.intel.com/eula.
 +------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
 
 
-+-------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary              ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 72.25 MHz ; 72.25 MHz       ; CLOCK_50   ;      ;
-+-----------+-----------------+------------+------+
++------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary             ;
++----------+-----------------+------------+------+
+; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
++----------+-----------------+------------+------+
+; 70.0 MHz ; 70.0 MHz        ; CLOCK_50   ;      ;
++----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -161,7 +161,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+------------------+
 ; Clock    ; Slack ; End Point TNS    ;
 +----------+-------+------------------+
-; CLOCK_50 ; 6.159 ; 0.000            ;
+; CLOCK_50 ; 5.714 ; 0.000            ;
 +----------+-------+------------------+
 
 
@@ -170,7 +170,7 @@ HTML report is unavailable in plain text report export.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.290 ; 0.000           ;
+; CLOCK_50 ; 0.342 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -191,7 +191,7 @@ No paths to report.
 +----------+-------+--------------------------------+
 ; Clock    ; Slack ; End Point TNS                  ;
 +----------+-------+--------------------------------+
-; CLOCK_50 ; 9.147 ; 0.000                          ;
+; CLOCK_50 ; 9.144 ; 0.000                          ;
 +----------+-------+--------------------------------+
 
 
@@ -206,7 +206,7 @@ No synchronizer chains to report.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 67.99 MHz ; 67.99 MHz       ; CLOCK_50   ;      ;
+; 66.27 MHz ; 66.27 MHz       ; CLOCK_50   ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -216,7 +216,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 5.291 ; 0.000           ;
+; CLOCK_50 ; 4.911 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -225,7 +225,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.154 ; 0.000          ;
+; CLOCK_50 ; 0.322 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -246,7 +246,7 @@ No paths to report.
 +----------+-------+-------------------------------+
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
-; CLOCK_50 ; 9.250 ; 0.000                         ;
+; CLOCK_50 ; 9.252 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
@@ -261,7 +261,7 @@ No synchronizer chains to report.
 +----------+--------+-----------------+
 ; Clock    ; Slack  ; End Point TNS   ;
 +----------+--------+-----------------+
-; CLOCK_50 ; 14.012 ; 0.000           ;
+; CLOCK_50 ; 13.503 ; 0.000           ;
 +----------+--------+-----------------+
 
 
@@ -270,7 +270,7 @@ No synchronizer chains to report.
 +----------+-------+-----------------+
 ; Clock    ; Slack ; End Point TNS   ;
 +----------+-------+-----------------+
-; CLOCK_50 ; 0.178 ; 0.000           ;
+; CLOCK_50 ; 0.169 ; 0.000           ;
 +----------+-------+-----------------+
 
 
@@ -306,7 +306,7 @@ No synchronizer chains to report.
 +----------+--------+----------------+
 ; Clock    ; Slack  ; End Point TNS  ;
 +----------+--------+----------------+
-; CLOCK_50 ; 14.311 ; 0.000          ;
+; CLOCK_50 ; 13.912 ; 0.000          ;
 +----------+--------+----------------+
 
 
@@ -315,7 +315,7 @@ No synchronizer chains to report.
 +----------+-------+----------------+
 ; Clock    ; Slack ; End Point TNS  ;
 +----------+-------+----------------+
-; CLOCK_50 ; 0.108 ; 0.000          ;
+; CLOCK_50 ; 0.157 ; 0.000          ;
 +----------+-------+----------------+
 
 
@@ -336,7 +336,7 @@ No paths to report.
 +----------+-------+-------------------------------+
 ; Clock    ; Slack ; End Point TNS                 ;
 +----------+-------+-------------------------------+
-; CLOCK_50 ; 9.054 ; 0.000                         ;
+; CLOCK_50 ; 9.055 ; 0.000                         ;
 +----------+-------+-------------------------------+
 
 
@@ -351,8 +351,8 @@ No synchronizer chains to report.
 +------------------+-------+-------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+-------+----------+---------+---------------------+
-; Worst-case Slack ; 5.291 ; 0.108 ; N/A      ; N/A     ; 9.054               ;
-;  CLOCK_50        ; 5.291 ; 0.108 ; N/A      ; N/A     ; 9.054               ;
+; Worst-case Slack ; 4.911 ; 0.157 ; N/A      ; N/A     ; 9.055               ;
+;  CLOCK_50        ; 4.911 ; 0.157 ; N/A      ; N/A     ; 9.055               ;
 ; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  CLOCK_50        ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
 +------------------+-------+-------+----------+---------+---------------------+
@@ -567,7 +567,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 1242403  ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 1239526  ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -577,7 +577,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; CLOCK_50   ; CLOCK_50 ; 1242403  ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; CLOCK_50 ; 1239526  ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -602,7 +602,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 8     ; 8    ;
-; Unconstrained Input Port Paths  ; 912   ; 912  ;
+; Unconstrained Input Port Paths  ; 980   ; 980  ;
 ; Unconstrained Output Ports      ; 25    ; 25   ;
 ; Unconstrained Output Port Paths ; 88    ; 88   ;
 +---------------------------------+-------+------+
@@ -721,7 +721,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 27 16:05:32 2024
+    Info: Processing started: Tue Apr 30 18:53:11 2024
 Info: Command: quartus_sta PROJ300_Edmonds_MANUAL -c PROJ300_Edmonds
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -729,63 +729,63 @@ Info (20030): Parallel compilation is enabled and will use 14 of the 14 processo
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'PROJ300_Edmonds.SDC'
-Warning (332174): Ignored filter at PROJ300_Edmonds.SDC(10): CLOCK2_50 could not be matched with a port File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 10
-Warning (332049): Ignored create_clock at PROJ300_Edmonds.SDC(10): Argument <targets> is an empty collection File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 10
-    Info (332050): create_clock -period "50.0 MHz" [get_ports CLOCK2_50] File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 10
-Warning (332174): Ignored filter at PROJ300_Edmonds.SDC(11): CLOCK3_50 could not be matched with a port File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 11
-Warning (332049): Ignored create_clock at PROJ300_Edmonds.SDC(11): Argument <targets> is an empty collection File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 11
-    Info (332050): create_clock -period "50.0 MHz" [get_ports CLOCK3_50] File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 11
-Warning (332174): Ignored filter at PROJ300_Edmonds.SDC(12): CLOCK4_50 could not be matched with a port File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 12
-Warning (332049): Ignored create_clock at PROJ300_Edmonds.SDC(12): Argument <targets> is an empty collection File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 12
-    Info (332050): create_clock -period "50.0 MHz" [get_ports CLOCK4_50] File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 12
+Warning (332174): Ignored filter at PROJ300_Edmonds.SDC(10): CLOCK2_50 could not be matched with a port File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 10
+Warning (332049): Ignored create_clock at PROJ300_Edmonds.SDC(10): Argument <targets> is an empty collection File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 10
+    Info (332050): create_clock -period "50.0 MHz" [get_ports CLOCK2_50] File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 10
+Warning (332174): Ignored filter at PROJ300_Edmonds.SDC(11): CLOCK3_50 could not be matched with a port File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 11
+Warning (332049): Ignored create_clock at PROJ300_Edmonds.SDC(11): Argument <targets> is an empty collection File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 11
+    Info (332050): create_clock -period "50.0 MHz" [get_ports CLOCK3_50] File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 11
+Warning (332174): Ignored filter at PROJ300_Edmonds.SDC(12): CLOCK4_50 could not be matched with a port File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 12
+Warning (332049): Ignored create_clock at PROJ300_Edmonds.SDC(12): Argument <targets> is an empty collection File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 12
+    Info (332050): create_clock -period "50.0 MHz" [get_ports CLOCK4_50] File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.SDC Line: 12
 Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Info (332146): Worst-case setup slack is 6.159
+Info (332146): Worst-case setup slack is 5.714
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     6.159               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.290
+    Info (332119):     5.714               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.342
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.290               0.000 CLOCK_50 
+    Info (332119):     0.342               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 9.147
+Info (332146): Worst-case minimum pulse width slack is 9.144
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.147               0.000 CLOCK_50 
+    Info (332119):     9.144               0.000 CLOCK_50 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 5.291
+Info (332146): Worst-case setup slack is 4.911
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     5.291               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.154
+    Info (332119):     4.911               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.322
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.154               0.000 CLOCK_50 
+    Info (332119):     0.322               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 9.250
+Info (332146): Worst-case minimum pulse width slack is 9.252
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.250               0.000 CLOCK_50 
+    Info (332119):     9.252               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.012
+Info (332146): Worst-case setup slack is 13.503
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.012               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.178
+    Info (332119):    13.503               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.169
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.178               0.000 CLOCK_50 
+    Info (332119):     0.169               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 9.094
@@ -794,25 +794,25 @@ Info (332146): Worst-case minimum pulse width slack is 9.094
     Info (332119):     9.094               0.000 CLOCK_50 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 14.311
+Info (332146): Worst-case setup slack is 13.912
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.311               0.000 CLOCK_50 
-Info (332146): Worst-case hold slack is 0.108
+    Info (332119):    13.912               0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is 0.157
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.108               0.000 CLOCK_50 
+    Info (332119):     0.157               0.000 CLOCK_50 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is 9.054
+Info (332146): Worst-case minimum pulse width slack is 9.055
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.054               0.000 CLOCK_50 
+    Info (332119):     9.055               0.000 CLOCK_50 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5215 megabytes
-    Info: Processing ended: Sat Apr 27 16:05:39 2024
+    Info: Peak virtual memory: 5217 megabytes
+    Info: Processing ended: Tue Apr 30 18:53:18 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 

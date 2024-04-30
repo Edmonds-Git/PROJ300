@@ -55,10 +55,10 @@ module PWM_SERVO_CONTROL (
 	begin
 		if(nextangle == 1'd1)
 			begin
-				timer_t1 <= 15'd27200 + angle1 *  10'd515;//20'd275000 + angle1 * 9'd275; //15'd27200 + angle1 *  10'd515;
-				timer_t2 <= 15'd27200 + angle2 *  10'd515;//20'd275000 + angle2 * 9'd275; //15'd27200 + angle2 *  10'd515;
-				timer_t3 <= 15'd27200 + angle3 *  10'd515; //20'd275000 + angle3 * 9'd275; //15'd27200 + angle3 *  10'd515;
-				timer_t4 <= 15'd27200 + angle4 *  10'd515;//20'd275000 + angle4 * 9'd275; //15'd27200 + angle4 *  10'd515;
+				timer_t1 <= 16'd50000 + angle1 * 10'd275;
+				timer_t2 <= 16'd50000 + angle2 * 10'd275;
+				timer_t3 <= 17'd50000 + angle3 * 10'd275;
+				timer_t4 <= 16'd50000 + angle4 * 10'd275;
 				state1 <= next_state1;
 				if (state1 > mxvlue-timer_t1)
 					servo1 <= 1;

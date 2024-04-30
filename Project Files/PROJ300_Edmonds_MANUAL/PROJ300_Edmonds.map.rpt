@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PROJ300_Edmonds
-Sat Apr 27 16:04:34 2024
+Tue Apr 30 18:52:10 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Apr 27 16:04:34 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 30 18:52:10 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PROJ300_Edmonds                             ;
 ; Top-level Entity Name           ; Top                                         ;
@@ -196,28 +196,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; Top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/Top.bdf                    ;         ;
-; PWM_SERVO_CONTROL.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL.sv       ;         ;
-; KEY_INPUT.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/KEY_INPUT.sv               ;         ;
-; LED_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/LED_7seg.v                 ;         ;
-; ANGLE_DECODE.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv            ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                            ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                           ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                       ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                            ;         ;
-; db/lpm_divide_82m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_82m.tdf      ;         ;
-; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_bkh.tdf ;         ;
-; db/alt_u_div_sse.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_sse.tdf       ;         ;
-; db/lpm_divide_5am.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_5am.tdf      ;         ;
-; db/lpm_divide_8am.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_8am.tdf      ;         ;
-; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_ekh.tdf ;         ;
-; db/alt_u_div_2te.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_2te.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; Top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/Top.bdf                    ;         ;
+; PWM_SERVO_CONTROL.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL.sv       ;         ;
+; KEY_INPUT.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/KEY_INPUT.sv               ;         ;
+; LED_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/LED_7seg.v                 ;         ;
+; ANGLE_DECODE.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                         ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                        ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                    ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                         ;         ;
+; db/lpm_divide_82m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_82m.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_sse.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_sse.tdf       ;         ;
+; db/lpm_divide_5am.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_5am.tdf      ;         ;
+; db/lpm_divide_8am.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_8am.tdf      ;         ;
+; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_ekh.tdf ;         ;
+; db/alt_u_div_2te.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_2te.tdf       ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -225,14 +225,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 562            ;
+; Estimate of Logic utilization (ALMs needed) ; 609            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1033           ;
-;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 59             ;
-;     -- 5 input functions                    ; 66             ;
-;     -- 4 input functions                    ; 116            ;
-;     -- <=3 input functions                  ; 791            ;
+; Combinational ALUT usage for logic          ; 1128           ;
+;     -- 7 input functions                    ; 4              ;
+;     -- 6 input functions                    ; 74             ;
+;     -- 5 input functions                    ; 75             ;
+;     -- 4 input functions                    ; 121            ;
+;     -- <=3 input functions                  ; 854            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 280            ;
 ;                                             ;                ;
@@ -242,8 +242,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 280            ;
-; Total fan-out                               ; 3967           ;
-; Average fan-out                             ; 2.82           ;
+; Total fan-out                               ; 4191           ;
+; Average fan-out                             ; 2.79           ;
 +---------------------------------------------+----------------+
 
 
@@ -252,7 +252,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Top                                      ; 1033 (1)            ; 280 (0)                   ; 0                 ; 4          ; 44   ; 0            ; |Top                                                                                                                     ; Top                 ; work         ;
+; |Top                                      ; 1128 (1)            ; 280 (0)                   ; 0                 ; 4          ; 44   ; 0            ; |Top                                                                                                                     ; Top                 ; work         ;
 ;    |ANGLE_DECODE:inst4|                   ; 700 (16)            ; 108 (108)                 ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4                                                                                                  ; ANGLE_DECODE        ; work         ;
 ;       |lpm_divide:Div0|                   ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Div0                                                                                  ; lpm_divide          ; work         ;
 ;          |lpm_divide_8am:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Div0|lpm_divide_8am:auto_generated                                                    ; lpm_divide_8am      ; work         ;
@@ -334,9 +334,9 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_82m:auto_generated|  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Mod9|lpm_divide_82m:auto_generated                                                    ; lpm_divide_82m      ; work         ;
 ;             |sign_div_unsign_bkh:divider| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Mod9|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider                        ; sign_div_unsign_bkh ; work         ;
 ;                |alt_u_div_sse:divider|    ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ANGLE_DECODE:inst4|lpm_divide:Mod9|lpm_divide_82m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_sse:divider  ; alt_u_div_sse       ; work         ;
-;    |KEY_INPUT:inst1|                      ; 86 (86)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|KEY_INPUT:inst1                                                                                                     ; KEY_INPUT           ; work         ;
+;    |KEY_INPUT:inst1|                      ; 121 (121)           ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|KEY_INPUT:inst1                                                                                                     ; KEY_INPUT           ; work         ;
 ;    |LED_7seg:inst3|                       ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|LED_7seg:inst3                                                                                                      ; LED_7seg            ; work         ;
-;    |PWM_SERVO_CONTROL:inst2|              ; 225 (225)           ; 108 (108)                 ; 0                 ; 4          ; 0    ; 0            ; |Top|PWM_SERVO_CONTROL:inst2                                                                                             ; PWM_SERVO_CONTROL   ; work         ;
+;    |PWM_SERVO_CONTROL:inst2|              ; 285 (285)           ; 108 (108)                 ; 0                 ; 4          ; 0    ; 0            ; |Top|PWM_SERVO_CONTROL:inst2                                                                                             ; PWM_SERVO_CONTROL   ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -346,7 +346,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
-; Independent 18x18 plus 36       ; 4           ;
+; Independent 9x9                 ; 4           ;
 ; Total number of DSP blocks      ; 4           ;
 ;                                 ;             ;
 ; Fixed Point Unsigned Multiplier ; 4           ;
@@ -360,29 +360,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 280   ;
 ; Number of registers using Synchronous Clear  ; 32    ;
-; Number of registers using Synchronous Load   ; 48    ;
+; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 244   ;
+; Number of registers using Clock Enable       ; 230   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_1[7]       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_1[3]       ;
-; 16:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |Top|ANGLE_DECODE:inst4|angle_out[10] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_2[3]       ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_2[7]       ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_3[3]       ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_3[7]       ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_4[3]       ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |Top|KEY_INPUT:inst1|angle_4[0]       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 16:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |Top|ANGLE_DECODE:inst4|angle_out[4] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_4[3]      ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_4[0]      ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_1[7]      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_1[3]      ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_2[3]      ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_2[7]      ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_3[6]      ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; Yes        ; |Top|KEY_INPUT:inst1|angle_3[4]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -851,27 +851,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 280                         ;
-;     ENA               ; 196                         ;
-;     ENA SLD           ; 48                          ;
+;     ENA               ; 214                         ;
+;     ENA SLD           ; 16                          ;
 ;     SCLR              ; 32                          ;
-;     plain             ; 4                           ;
-; arriav_lcell_comb     ; 1036                        ;
-;     arith             ; 496                         ;
-;         0 data inputs ; 108                         ;
-;         1 data inputs ; 156                         ;
+;     plain             ; 18                          ;
+; arriav_lcell_comb     ; 1131                        ;
+;     arith             ; 552                         ;
+;         0 data inputs ; 112                         ;
+;         1 data inputs ; 208                         ;
 ;         2 data inputs ; 68                          ;
 ;         3 data inputs ; 132                         ;
 ;         4 data inputs ; 32                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 427                         ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 463                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 134                         ;
-;         3 data inputs ; 72                          ;
-;         4 data inputs ; 84                          ;
-;         5 data inputs ; 66                          ;
-;         6 data inputs ; 59                          ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 133                         ;
+;         3 data inputs ; 76                          ;
+;         4 data inputs ; 89                          ;
+;         5 data inputs ; 75                          ;
+;         6 data inputs ; 74                          ;
 ;     shared            ; 112                         ;
 ;         0 data inputs ; 36                          ;
 ;         1 data inputs ; 76                          ;
@@ -879,7 +879,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.20                       ;
-; Average LUT depth     ; 6.32                        ;
+; Average LUT depth     ; 6.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -898,88 +898,88 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Apr 27 16:04:24 2024
+    Info: Processing started: Tue Apr 30 18:52:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds_MANUAL -c PROJ300_Edmonds
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file proj300_edmonds.v
-    Info (12023): Found entity 1: PROJ300_Edmonds File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.v Line: 6
+    Info (12023): Found entity 1: PROJ300_Edmonds File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PROJ300_Edmonds.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_servo_control_tb.sv
-    Info (12023): Found entity 1: PWM_SERVO_CONTROL_TB File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL_TB.sv Line: 1
+    Info (12023): Found entity 1: PWM_SERVO_CONTROL_TB File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL_TB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
     Info (12023): Found entity 1: Top
 Info (12021): Found 1 design units, including 1 entities, in source file led_test.sv
-    Info (12023): Found entity 1: led_test File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/led_test.sv Line: 1
+    Info (12023): Found entity 1: led_test File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/led_test.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_servo_control.sv
-    Info (12023): Found entity 1: PWM_SERVO_CONTROL File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL.sv Line: 12
+    Info (12023): Found entity 1: PWM_SERVO_CONTROL File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL.sv Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file angle_pwm_combined_tb.sv
-    Info (12023): Found entity 1: ANGLE_PWM_COMBINED_TB File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_PWM_COMBINED_TB.sv Line: 1
+    Info (12023): Found entity 1: ANGLE_PWM_COMBINED_TB File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_PWM_COMBINED_TB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file key_input.sv
-    Info (12023): Found entity 1: KEY_INPUT File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/KEY_INPUT.sv Line: 1
+    Info (12023): Found entity 1: KEY_INPUT File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/KEY_INPUT.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file led_7seg.v
-    Info (12023): Found entity 1: LED_7seg File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/LED_7seg.v Line: 6
+    Info (12023): Found entity 1: LED_7seg File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/LED_7seg.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file angle_decode.sv
-    Info (12023): Found entity 1: ANGLE_DECODE File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 1
+    Info (12023): Found entity 1: ANGLE_DECODE File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 1
 Info (12127): Elaborating entity "Top" for the top level hierarchy
 Info (12128): Elaborating entity "PWM_SERVO_CONTROL" for hierarchy "PWM_SERVO_CONTROL:inst2"
-Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(41): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL.sv Line: 41
+Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(44): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/PWM_SERVO_CONTROL.sv Line: 44
 Info (12128): Elaborating entity "KEY_INPUT" for hierarchy "KEY_INPUT:inst1"
 Info (12128): Elaborating entity "LED_7seg" for hierarchy "LED_7seg:inst3"
 Info (12128): Elaborating entity "ANGLE_DECODE" for hierarchy "ANGLE_DECODE:inst4"
-Info (10264): Verilog HDL Case Statement information at ANGLE_DECODE.sv(20): all case item expressions in this case statement are onehot File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 20
+Info (10264): Verilog HDL Case Statement information at ANGLE_DECODE.sv(20): all case item expressions in this case statement are onehot File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 20
 Info (278001): Inferred 20 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod11" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod8" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod2" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 26
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod5" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 35
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div7" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod10" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div5" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 43
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod7" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 43
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div1" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 25
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod1" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 25
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div3" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod4" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 34
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div6" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod9" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div4" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 42
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod6" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 42
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div0" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 24
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod0" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 24
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div2" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 33
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod3" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 33
-Info (12130): Elaborated megafunction instantiation "ANGLE_DECODE:inst4|lpm_divide:Mod11" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 53
-Info (12133): Instantiated megafunction "ANGLE_DECODE:inst4|lpm_divide:Mod11" with the following parameter: File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod11" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod8" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod2" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod5" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 35
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div7" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod10" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div5" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 43
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod7" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 43
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div1" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 25
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod1" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 25
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div3" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod4" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div6" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod9" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div4" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 42
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod6" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 42
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div0" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 24
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod0" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 24
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Div2" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 33
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ANGLE_DECODE:inst4|Mod3" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 33
+Info (12130): Elaborated megafunction instantiation "ANGLE_DECODE:inst4|lpm_divide:Mod11" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 53
+Info (12133): Instantiated megafunction "ANGLE_DECODE:inst4|lpm_divide:Mod11" with the following parameter: File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 53
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_82m.tdf
-    Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_82m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_82m File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_82m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_bkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_bkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sse.tdf
-    Info (12023): Found entity 1: alt_u_div_sse File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_sse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "ANGLE_DECODE:inst4|lpm_divide:Div7" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
-Info (12133): Instantiated megafunction "ANGLE_DECODE:inst4|lpm_divide:Div7" with the following parameter: File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
+    Info (12023): Found entity 1: alt_u_div_sse File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_sse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ANGLE_DECODE:inst4|lpm_divide:Div7" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
+Info (12133): Instantiated megafunction "ANGLE_DECODE:inst4|lpm_divide:Div7" with the following parameter: File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 52
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5am.tdf
-    Info (12023): Found entity 1: lpm_divide_5am File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_5am.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "ANGLE_DECODE:inst4|lpm_divide:Div6" File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
-Info (12133): Instantiated megafunction "ANGLE_DECODE:inst4|lpm_divide:Div6" with the following parameter: File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
+    Info (12023): Found entity 1: lpm_divide_5am File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_5am.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "ANGLE_DECODE:inst4|lpm_divide:Div6" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
+Info (12133): Instantiated megafunction "ANGLE_DECODE:inst4|lpm_divide:Div6" with the following parameter: File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/ANGLE_DECODE.sv Line: 51
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8am.tdf
-    Info (12023): Found entity 1: lpm_divide_8am File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_8am.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_8am File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/lpm_divide_8am.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_ekh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/sign_div_unsign_ekh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_2te.tdf
-    Info (12023): Found entity 1: alt_u_div_2te File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_2te.tdf Line: 23
+    Info (12023): Found entity 1: alt_u_div_2te File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds_MANUAL/db/alt_u_div_2te.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_0[6]" is stuck at GND
     Warning (13410): Pin "GPIO_0[4]" is stuck at GND
@@ -995,15 +995,15 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[5]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[1]"
-Info (21057): Implemented 1233 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1272 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 1185 logic cells
+    Info (21061): Implemented 1224 logic cells
     Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Sat Apr 27 16:04:34 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4886 megabytes
+    Info: Processing ended: Tue Apr 30 18:52:10 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:14
 
 
