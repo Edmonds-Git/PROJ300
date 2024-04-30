@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at PWM_SERVO_CONTROL.sv(54): always construct contains both blocking and non-blocking assignments File: C:/Users/tedmonds/GITHUB/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 54
+Info (10281): Verilog HDL Declaration information at TOP_LEVEL.sv(11): object "rdy" differs only in case from object "RDY" in the same scope File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 11

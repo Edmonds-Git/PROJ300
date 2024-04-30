@@ -1,5 +1,5 @@
 
-State Machine - |Top|ANGLE_OUTPUT_UNIT:inst|next_move
+State Machine - |Top|TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move
 Name next_move.0011 next_move.0010 next_move.0001 next_move.0100 
 next_move.0001 0 0 0 0 
 next_move.0010 0 1 1 0 
