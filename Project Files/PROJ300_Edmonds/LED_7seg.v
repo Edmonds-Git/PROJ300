@@ -34,7 +34,7 @@ begin
 	 4'hd: SevenSeg_L = 7'b1000010;		//d
 	 4'he: SevenSeg_L = 7'b0110000;		//E
 	 4'hf: SevenSeg_L = 7'b0111000;		//F
-	 
+	 default:SevenSeg_L = 7'b0000001;	
 	endcase
 	
 	case(Data_in[7:4])
@@ -54,6 +54,7 @@ begin
 	 4'hd: SevenSeg_M = 7'b1000010;		//d
 	 4'he: SevenSeg_M = 7'b0110000;		//E
 	 4'hf: SevenSeg_M = 7'b0111000;		//F
+	 default:SevenSeg_M = 7'b0000001;	
 	 
 	 endcase
 	 
@@ -74,6 +75,7 @@ begin
 	 4'hd: SevenSeg_H = 7'b1000010;		//d
 	 4'he: SevenSeg_H = 7'b0110000;		//E
 	 4'hf: SevenSeg_H = 7'b0111000;		//F
+	 default:SevenSeg_H = 7'b0000001;	
 	 
 	endcase
 	case(target_reached)

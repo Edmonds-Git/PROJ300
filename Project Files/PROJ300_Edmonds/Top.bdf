@@ -915,6 +915,23 @@ https://fpgasoftware.intel.com/eula.
 	(rotate180)
 	(annotation_block (location)(rect 224 648 288 672))
 )
+(pin
+	(output)
+	(rect 928 168 1104 184)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "LEDR[0]" (rect 90 0 132 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1104 184 1168 208))
+)
 (symbol
 	(rect 72 224 248 464)
 	(text "TOP_LEVEL" (rect 5 0 65 12)(font "Arial" ))
@@ -1052,6 +1069,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "seg_t[6..0]" (rect 111 139 155 151)(font "Arial" ))
 		(line (pt 176 144)(pt 160 144)(line_width 3))
 	)
+	(port
+		(pt 176 160)
+		(output)
+		(text "LED0" (rect 0 0 27 12)(font "Arial" ))
+		(text "LED0" (rect 133 155 155 167)(font "Arial" ))
+		(line (pt 176 160)(pt 160 160))
+	)
 	(drawing
 		(rectangle (rect 16 16 160 224))
 	)
@@ -1181,15 +1205,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "key3" (rect -62 696 -39 713)(font "Intel Clear" ))
 	(pt -56 712)
 	(pt -32 712)
-)
-(connector
-	(pt -56 744)
-	(pt -48 744)
-)
-(connector
-	(text "key4" (rect -54 728 -31 745)(font "Intel Clear" ))
-	(pt -48 744)
-	(pt -32 744)
 )
 (connector
 	(text "seg_L[1]" (rect 312 333 329 374)(font "Intel Clear" )(vertical))
@@ -1630,6 +1645,26 @@ https://fpgasoftware.intel.com/eula.
 	(pt 128 160)
 	(pt 160 160)
 )
+(connector
+	(text "LED0" (rect 248 368 272 385)(font "Intel Clear" ))
+	(pt 248 384)
+	(pt 264 384)
+)
+(connector
+	(text "LED0" (rect 882 160 906 177)(font "Intel Clear" ))
+	(pt 928 176)
+	(pt 872 176)
+)
+(connector
+	(text "SW0" (rect 42 240 64 257)(font "Intel Clear" ))
+	(pt 72 256)
+	(pt 32 256)
+)
+(connector
+	(text "key4" (rect -38 728 -15 745)(font "Intel Clear" ))
+	(pt -48 744)
+	(pt 32 744)
+)
 (junction (pt -64 464))
 (junction (pt -64 504))
 (junction (pt -64 544))
@@ -1644,7 +1679,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt -56 648))
 (junction (pt -56 680))
 (junction (pt -56 712))
-(junction (pt -48 744))
 (junction (pt 424 352))
 (junction (pt 448 352))
 (junction (pt 608 336))

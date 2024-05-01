@@ -3,6 +3,7 @@ module BLOCKED_STATES(
 	output logic [5:0] start_state,
 	output logic [5:0] blocked[16],
 	output logic [5:0] target_state,
+	output logic done,
 	input logic [31:0] old_Q [37][4],
 	input logic clk,
 	input logic rst); 
@@ -16,12 +17,17 @@ module BLOCKED_STATES(
 //maze 2
 //
 /////////////////////////////////////////////////////////////////////////
-	always @(posedge clk or posedge rst)
+
+	always_comb
 	begin
-		new_Q = old_Q; //start with new Q equal to old Q
 		blocked = '{7,8,9,11,13,15,17,26,28,30,32,34,0,0,0,0}; 
-		target_state = 36;
+		target_state = 6'd36;
 		start_state = 1;
+	end
+	always @(posedge clk)
+	begin
+		done = 0;
+		new_Q = old_Q; //start with new Q equal to old Q
 		for (int i = 0; i < $size(blocked); i++) //repeat as many times as there are blocked states
 		begin
 			case (blocked[i])
@@ -70,5 +76,6 @@ module BLOCKED_STATES(
 				default:new_Q = new_Q;
 			endcase
 		end
+		done = 1;
 	end
 endmodule

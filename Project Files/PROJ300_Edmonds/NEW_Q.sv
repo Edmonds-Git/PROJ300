@@ -1,13 +1,16 @@
 
 module NEW_Q(
 	output logic [31:0] new_Q[37][4],
+	output logic done_o,
 	input logic [31:0] old_Q [37][4],
 	input logic [5:0] maze_state,
 	input logic [31:0] max_Q,
-	input logic [2:0] action,
-	input logic [31:0] reward,
+	input logic [3:0] action,
+	input logic [3:0] reward,
 	input logic clk,
-	input logic rst);
+	input logic rst,
+	input logic done);
+	
 	
 	//fixed point scaling factor = Q7.24
 	localparam SF = 2.0**-24.0; 
@@ -27,33 +30,54 @@ module NEW_Q(
 //	assign maze_state = 6'd5;
 //	assign action = 3'd2;
 //	assign reward = 32'd10;
-	always@(old_Q or rst)
+//	assign	old_Q [1][1] = 32'b00000000000000000001011100010111;
+//	assign	action = 1;
+//	assign	reward = 0;
+//	assign	maze_state = 1;
+//	assign	max_Q = 32'b00000000000000000001011100010111;
+//	assign done = 1;
+	//assign X_learn_Trim = 32'd0;
+	
+	logic done_clk;
+	always_ff @(clk)
 	begin
+		if (done == 1)
+			done_clk = clk;
+		else 
+			done_clk = 0;
+	end
+	always @(posedge done_clk)
+	begin
+		done_o = 0;
 		//convert back to 32 bit Q7.24
 		//not actually needed for now
 		//result = max_Q*discount_factor;
 		//discount_x_max_Q = result[47:15];
-		discount_x_max_Q <= max_Q*discount_factor;
-		disc_trim <= discount_x_max_Q[48:17];//[56:24];
-		reward_shift <= reward << 16;
-		plus_reward <= reward_shift + disc_trim;
-		min_Q <= plus_reward - old_Q[maze_state][action];
+		discount_x_max_Q = max_Q*discount_factor;
+		disc_trim = discount_x_max_Q[48:17];//[56:24];
+		reward_shift = reward << 16;
+		plus_reward = reward_shift + disc_trim;
+		min_Q = plus_reward - old_Q[maze_state][action];
 		if (min_Q[31] == 1)
 		begin
-			min_Q_F <= ~min_Q;
+			min_Q_F = ~min_Q;
 		end
 		else
 		begin
-			min_Q_F <= min_Q;
+			min_Q_F = min_Q;
 		end
-		X_learn <= min_Q_F * learn_rate;
+		X_learn = min_Q_F * learn_rate;
 		//Probably need to remove the first and last 16 bits of X_learn
-		X_learn_Trim <= X_learn[48:17];//[56:24];//X_learn >> 32;//
+//		X_learn_Trim = 32'd0;
+		X_learn_Trim = X_learn[47:16];//[56:24];// X_learn << 32;
 		if (min_Q[31] == 1)
 		begin
-			X_learn_Trim <= ~X_learn_Trim;
+			X_learn_Trim = ~X_learn_Trim;
 		end
+		else
+			X_learn_Trim = X_learn_Trim;
 		//X_learn_Trim = X_learn >>> 32;
-		new_Q[maze_state][action] <= old_Q[maze_state][action] + X_learn_Trim;//add old_Q to the middle 32 bits of X_learn
+		new_Q[maze_state][action] = old_Q[maze_state][action] + X_learn_Trim;//add old_Q to the middle 32 bits of X_learn
+		done_o = 1;
 	end
 endmodule

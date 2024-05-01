@@ -9,7 +9,7 @@ module TIMER #(parameter int unsigned N=2500000) (output logic RDY, input logic 
     state_t state=N-2;
     state_t next_state;
 
-    always_comb begin : Timer_state_logic
+    always@(posedge clk) begin : Timer_state_logic
         next_state = state;
         case (state)
         0:next_state = (T_Start == 1) ? 1 : 0;
@@ -18,7 +18,7 @@ module TIMER #(parameter int unsigned N=2500000) (output logic RDY, input logic 
         endcase
     end
 
-    always_comb begin : Timer_output_logic
+    always@(posedge clk) begin : Timer_output_logic
         case (state)
         (N-1):   RDY = '1;
         default: RDY = '0;

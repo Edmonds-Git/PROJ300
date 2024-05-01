@@ -14,7 +14,8 @@ module TOP_LEVEL(
 	output logic servo2,
 	output logic servo3,
 	output logic servo4,
-	output [6:0] seg_H, seg_M, seg_L, seg_t);
+	output [6:0] seg_H, seg_M, seg_L, seg_t,
+	output logic LED0);
 
 	wire logic [7:0]angle1;
 	wire logic [7:0]angle2;
@@ -53,7 +54,9 @@ ANGLE_OUTPUT_UNIT ANGLE_OUTPUT_UNIT (
 	.SW8(SW8),
 	.SW9(SW9),
 	.rdy(rdy),
-	.next_state(next_state));
+	.next_state(next_state),
+	.start_state(start_state),
+	.rst(rst));
 	
 	PWM_SERVO_CONTROL PWM_SERVO_CONTROL (
 	.servo1(servo1),
@@ -73,14 +76,6 @@ ANGLE_OUTPUT_UNIT ANGLE_OUTPUT_UNIT (
 	.final_Q(final_Q),
 	.blocked(blocked),
 	.target_state(target_state),
-	.start_state(start_state));
-	
-	Q_EXPLOIT Q_EXPLOIT (
-	.clk(clk),
-	.rst(rst),
-	.final_Q(final_Q),
-	.blocked(blocked),
-	.target_state(target_state),
 	.start_state(start_state),
 	.move_complete(move_complete),
 	.maze_state(maze_state),
@@ -88,7 +83,20 @@ ANGLE_OUTPUT_UNIT ANGLE_OUTPUT_UNIT (
 	.timer_start(timer_start),
 	.target_reached(target_reached));
 	
-	TIMER TIMER (
+//	Q_EXPLOIT Q_EXPLOIT (
+//	.clk(clk),
+//	.rst(rst),
+//	.final_Q(final_Q),
+//	.blocked(blocked),
+//	.target_state(target_state),
+//	.start_state(start_state),
+//	.move_complete(move_complete),
+//	.maze_state(maze_state),
+//	.next_state(next_state),
+//	.timer_start(timer_start),
+//	.target_reached(target_reached));
+	
+	TIMER # (.N(1000000)) TIMER (
 	.RDY(rdy), 
 	.clk(clk), 
 	.T_Start(timer_start), 
@@ -116,4 +124,12 @@ ANGLE_OUTPUT_UNIT ANGLE_OUTPUT_UNIT (
 	 .seg_L(seg_L), 
 	 .seg_t(seg_t));
 	 
+	always@(posedge clk)
+	begin
+		if (final_Q[1][1] != '0)
+			LED0 = 1;
+		else
+			LED0 = 0;
+	end
+	
 endmodule
