@@ -10,103 +10,226 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv}
+# vlog -vlog01compat -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/LED_7seg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:16:20 on Feb 29,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv 
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/LED_7seg.v 
+# -- Compiling module LED_7seg
+# 
+# Top level modules:
+# 	LED_7seg
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv 
+# -- Compiling module Q_TRIAL
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv(6): (vlog-13314) Defaulting port 'old_Q' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv(9): (vlog-13314) Defaulting port 'blocked' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	Q_TRIAL
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv 
+# -- Compiling module Q_LEARN_V2
+# 
+# Top level modules:
+# 	Q_LEARN_V2
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv 
+# -- Compiling module NEW_Q
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv(5): (vlog-13314) Defaulting port 'old_Q' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	NEW_Q
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv 
+# -- Compiling module MAXQ_REWARD
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv(9): (vlog-13314) Defaulting port 'old_Q' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	MAXQ_REWARD
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/INIT_Q.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/INIT_Q.sv 
+# -- Compiling module INIT_Q
+# 
+# Top level modules:
+# 	INIT_Q
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/BLOCKED_STATES.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/BLOCKED_STATES.sv 
+# -- Compiling module BLOCKED_STATES
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/BLOCKED_STATES.sv(7): (vlog-13314) Defaulting port 'old_Q' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	BLOCKED_STATES
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv 
 # -- Compiling module PWM_SERVO_CONTROL
 # 
 # Top level modules:
 # 	PWM_SERVO_CONTROL
-# End time: 16:16:20 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv}
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:16:20 on Feb 29,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv 
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv 
 # -- Compiling module ANGLE_OUTPUT_UNIT
 # 
 # Top level modules:
 # 	ANGLE_OUTPUT_UNIT
-# End time: 16:16:20 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-vlog -sv -work work {+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds} {C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv}
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:16:45 on Feb 29,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv 
-# -- Compiling module ANGLE_OUTPUT_UNIT
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv 
+# -- Compiling module ANGLE_DECODE
 # 
 # Top level modules:
-# 	ANGLE_OUTPUT_UNIT
-# End time: 16:16:45 on Feb 29,2024, Elapsed time: 0:00:00
+# 	ANGLE_DECODE
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -sv -work work {+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds} {C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv}
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:16:49 on Feb 29,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv 
-# -- Compiling module PWM_SERVO_CONTROL
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv 
+# -- Compiling module TIMER
 # 
 # Top level modules:
-# 	PWM_SERVO_CONTROL
-# End time: 16:16:49 on Feb 29,2024, Elapsed time: 0:00:00
+# 	TIMER
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -reportprogress 300 -work work {C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv}
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:16:59 on Feb 29,2024
-# vlog -reportprogress 300 -work work C:/Users/tedmonds/Documents/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv 
-# -- Compiling module PWM_SERVO_CONTROL_TB
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv 
+# -- Compiling module Q_TRIAL_EXPLOIT
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv(7): (vlog-13314) Defaulting port 'old_Q' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv(10): (vlog-13314) Defaulting port 'blocked' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
-# 	PWM_SERVO_CONTROL_TB
-# End time: 16:16:59 on Feb 29,2024, Elapsed time: 0:00:00
+# 	Q_TRIAL_EXPLOIT
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ACTION_EXPLOIT.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ACTION_EXPLOIT.sv 
+# -- Compiling module ACTION_EXPLOIT
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ACTION_EXPLOIT.sv(5): (vlog-13314) Defaulting port 'old_Q' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	ACTION_EXPLOIT
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv 
+# -- Compiling module Q_EXPLOIT
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv(4): (vlog-13314) Defaulting port 'final_Q' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv(5): (vlog-13314) Defaulting port 'blocked' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	Q_EXPLOIT
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vlog -sv -work work +incdir+C:/Users/tedmonds/GIT/PROJ300/Project\ Files/PROJ300_Edmonds {C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:23:01 on May 01,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds" C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv 
+# -- Compiling module TOP_LEVEL
+# 
+# Top level modules:
+# 	TOP_LEVEL
+# End time: 19:23:01 on May 01,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.PWM_SERVO_CONTROL_TB
-# vsim work.PWM_SERVO_CONTROL_TB 
-# Start time: 16:17:02 on Feb 29,2024
+# 
+vsim work.TOP_LEVEL
+# vsim work.TOP_LEVEL 
+# Start time: 19:23:05 on May 01,2024
 # Loading sv_std.std
-# Loading work.PWM_SERVO_CONTROL_TB
-# Loading work.PWM_SERVO_CONTROL
-run
-add wave -position insertpoint  \
-sim:/PWM_SERVO_CONTROL_TB/servo1 \
-sim:/PWM_SERVO_CONTROL_TB/servo2 \
-sim:/PWM_SERVO_CONTROL_TB/servo3 \
-sim:/PWM_SERVO_CONTROL_TB/servo4 \
-sim:/PWM_SERVO_CONTROL_TB/clk \
-sim:/PWM_SERVO_CONTROL_TB/nextangle \
-sim:/PWM_SERVO_CONTROL_TB/angle1 \
-sim:/PWM_SERVO_CONTROL_TB/angle2 \
-sim:/PWM_SERVO_CONTROL_TB/angle3 \
-sim:/PWM_SERVO_CONTROL_TB/angle4
-run
-run
-# Can't move the Now cursor.
-# Break key hit
-quit -sim
-# End time: 16:20:00 on Feb 29,2024, Elapsed time: 0:02:58
-# Errors: 0, Warnings: 0
-vsim work.ANGLE_OUTPUT_UNIT
-# vsim work.ANGLE_OUTPUT_UNIT 
-# Start time: 16:20:02 on Feb 29,2024
-# Loading sv_std.std
+# Loading work.TOP_LEVEL
 # Loading work.ANGLE_OUTPUT_UNIT
+# Loading work.PWM_SERVO_CONTROL
+# Loading work.Q_LEARN_V2
+# Loading work.INIT_Q
+# Loading work.BLOCKED_STATES
+# Loading work.Q_EXPLOIT
+# Loading work.ACTION_EXPLOIT
+# Loading work.Q_TRIAL_EXPLOIT
+# Loading work.TIMER
+# Loading work.ANGLE_DECODE
+# Loading work.LED_7seg
+# Loading work.MAXQ_REWARD
+# Loading work.NEW_Q
+# Loading work.Q_TRIAL
 add wave -position insertpoint  \
-sim:/ANGLE_OUTPUT_UNIT/angle1 \
-sim:/ANGLE_OUTPUT_UNIT/angle2 \
-sim:/ANGLE_OUTPUT_UNIT/angle3 \
-sim:/ANGLE_OUTPUT_UNIT/angle4 \
-sim:/ANGLE_OUTPUT_UNIT/clk \
-sim:/ANGLE_OUTPUT_UNIT/SW1 \
-sim:/ANGLE_OUTPUT_UNIT/SW2 \
-sim:/ANGLE_OUTPUT_UNIT/SW3 \
-sim:/ANGLE_OUTPUT_UNIT/SW4 \
-sim:/ANGLE_OUTPUT_UNIT/switches
-force -freeze sim:/ANGLE_OUTPUT_UNIT/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW1 1 0
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW2 1 0
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW3 1 0
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW4 1 0
+sim:/TOP_LEVEL/timer_start \
+sim:/TOP_LEVEL/target_state \
+sim:/TOP_LEVEL/target_reached \
+sim:/TOP_LEVEL/t_restart \
+sim:/TOP_LEVEL/SW9 \
+sim:/TOP_LEVEL/SW8 \
+sim:/TOP_LEVEL/SW7 \
+sim:/TOP_LEVEL/SW6 \
+sim:/TOP_LEVEL/SW4 \
+sim:/TOP_LEVEL/SW3 \
+sim:/TOP_LEVEL/SW2 \
+sim:/TOP_LEVEL/SW1 \
+sim:/TOP_LEVEL/SW0 \
+sim:/TOP_LEVEL/start_state \
+sim:/TOP_LEVEL/servo4 \
+sim:/TOP_LEVEL/servo3 \
+sim:/TOP_LEVEL/servo2 \
+sim:/TOP_LEVEL/servo1 \
+sim:/TOP_LEVEL/seg_t \
+sim:/TOP_LEVEL/seg_M \
+sim:/TOP_LEVEL/seg_L \
+sim:/TOP_LEVEL/seg_H \
+sim:/TOP_LEVEL/rst \
+sim:/TOP_LEVEL/rdy \
+sim:/TOP_LEVEL/next_state \
+sim:/TOP_LEVEL/move_complete \
+sim:/TOP_LEVEL/maze_state \
+sim:/TOP_LEVEL/LED0 \
+sim:/TOP_LEVEL/final_Q \
+sim:/TOP_LEVEL/clk \
+sim:/TOP_LEVEL/blocked \
+sim:/TOP_LEVEL/angle_out \
+sim:/TOP_LEVEL/angle4 \
+sim:/TOP_LEVEL/angle3 \
+sim:/TOP_LEVEL/angle2 \
+sim:/TOP_LEVEL/angle1
+force -freeze sim:/TOP_LEVEL/clk 1 0, 0 {0 ps} -r 2
+force -freeze sim:/TOP_LEVEL/SW0 1 0
+force -freeze sim:/TOP_LEVEL/rst 1 0
 run
 run
 run
@@ -115,14 +238,20 @@ run
 run
 run
 run
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW1 0 0
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW2 0 0
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW3 0 0
-force -freeze sim:/ANGLE_OUTPUT_UNIT/SW4 0 0
 run
 run
 run
 run
 run
-# End time: 16:40:48 on Feb 29,2024, Elapsed time: 0:20:46
-# Errors: 0, Warnings: 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

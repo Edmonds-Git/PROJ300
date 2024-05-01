@@ -3,12 +3,14 @@
 module MAXQ_REWARD (
 //output shortreal Q [36][4], // Q will be updated in a different module
 	output logic [31:0] max_Q,
-	output logic [2:0] action,
+	output logic [3:0] action,
 	output logic [3:0] reward,
+	output logic done_o,
 	input logic  [31:0] old_Q [37][4],
 	input logic [5:0] maze_state,
 	input logic clk,
-	input logic rst);
+	input logic rst,
+	input logic done);
 //	input shortreal learn_rate, //will be part of different module
 //	input shortreal discount_factor); //will be part of different module
 	
@@ -16,7 +18,15 @@ module MAXQ_REWARD (
 //	shortreal current_Q = old_Q(maze_state,0);
 //	shortreal current_Q[1][4] = {old_Q[maze_state][0], old_Q[maze_state][1],old_Q[maze_state][2],old_Q[maze_state][3]};
 	logic [31:0] current_Q[4];
-	always@(old_Q)
+	logic done_clk;
+	always_ff @(clk)
+	begin
+		if (done == 1)
+			done_clk = clk;
+		else 
+			done_clk = 0;
+	end
+	always @(posedge done_clk)
 	begin
 		current_Q = old_Q[maze_state];
 		if (current_Q[0] > current_Q[1] && current_Q[0] > current_Q[2] && current_Q[0] > current_Q[3])
@@ -39,9 +49,10 @@ module MAXQ_REWARD (
 				max_Q = current_Q[3];
 				action  = 3'd3;
 			end
+		done_o = 1;
 	end
 	
-	always@(action) //needs changing to allow for different final states
+	always@(posedge clk) //needs changing to allow for different final states
 	begin
 		if ((maze_state == 35 && action == 1) || (maze_state == 30 && action == 0))
 			reward = 10;

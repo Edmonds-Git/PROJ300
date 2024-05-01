@@ -1,5 +1,5 @@
 Flow report for PROJ300_Edmonds
-Wed May 01 10:56:09 2024
+Wed May 01 19:26:32 2024
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed May 01 10:56:01 2024       ;
+; Flow Status                     ; Successful - Wed May 01 19:26:32 2024       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; PROJ300_Edmonds                             ;
 ; Top-level Entity Name           ; Top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 142 / 18,480 ( < 1 % )                      ;
-; Total registers                 ; 151                                         ;
-; Total pins                      ; 51 / 224 ( 23 % )                           ;
+; Logic utilization (in ALMs)     ; 200 / 18,480 ( 1 % )                        ;
+; Total registers                 ; 123                                         ;
+; Total pins                      ; 52 / 224 ( 23 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
+; Total DSP Blocks                ; 4 / 66 ( 6 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/01/2024 10:54:48 ;
+; Start date & time ; 05/01/2024 19:25:37 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PROJ300_Edmonds     ;
 +-------------------+---------------------+
@@ -79,10 +79,12 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-----------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+-----------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 963351281665.171455728818984           ; --              ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; None                                   ; --              ; --          ; eda_simulation ;
+; COMPILER_SIGNATURE_ID               ; 963351281665.171458793721092           ; --              ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --              ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>          ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --          ; --             ;
+; NUM_PARALLEL_PROCESSORS             ; 14                                     ; --              ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; Top         ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; Top         ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; Top         ; Top            ;
@@ -97,11 +99,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:46     ; 1.0                     ; 7244 MB             ; 00:00:50                           ;
-; Fitter               ; 00:00:21     ; 1.1                     ; 7341 MB             ; 00:01:40                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4827 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.4                     ; 5209 MB             ; 00:00:04                           ;
-; Total                ; 00:01:22     ; --                      ; --                  ; 00:02:36                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 5269 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:18     ; 1.1                     ; 7338 MB             ; 00:01:24                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4832 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.5                     ; 5215 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 4755 MB             ; 00:00:01                           ;
+; Total                ; 00:00:55     ; --                      ; --                  ; 00:01:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,6 +117,7 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; smb303a-10       ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; smb303a-10       ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; smb303a-10       ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; smb303a-10       ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -124,6 +128,7 @@ quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds 
 quartus_fit --read_settings_files=off --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 quartus_asm --read_settings_files=off --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 quartus_sta PROJ300_Edmonds -c PROJ300_Edmonds
+quartus_eda --read_settings_files=off --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 
 
 
