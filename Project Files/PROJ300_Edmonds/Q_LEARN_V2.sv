@@ -39,15 +39,18 @@ module Q_LEARN_V2(
 		begin:Q_LEARN
 			MAXQ_REWARD MAXQ_REWARD(
 			.old_Q(new_Q_episodes[episode]), .maze_state(maze_state_episodes[episode]), .clk(clk), .rst(rst), .max_Q(max_Q_episodes[episode]), .action(action_episodes[episode]), .reward(reward_episodes[episode]));
-			
-			NEW_Q NEW_Q(
-			.old_Q(new_Q_episodes[episode]), .maze_state(maze_state_episodes[episode]), .clk(clk), .rst(rst), .max_Q(max_Q_episodes[episode]), .action(action_episodes[episode]), .reward(reward_episodes[episode]), .new_Q(new_Q_episodes[episode+1]));
+			if (episode == 100)
+				NEW_Q NEW_Q(
+				.old_Q(new_Q_episodes[episode]), .maze_state(maze_state_episodes[episode]), .clk(clk), .rst(rst), .max_Q(max_Q_episodes[episode]), .action(action_episodes[episode]), .reward(reward_episodes[episode]), .new_Q(final_Q));
+			else
+				NEW_Q NEW_Q(
+				.old_Q(new_Q_episodes[episode]), .maze_state(maze_state_episodes[episode]), .clk(clk), .rst(rst), .max_Q(max_Q_episodes[episode]), .action(action_episodes[episode]), .reward(reward_episodes[episode]), .new_Q(new_Q_episodes[episode+1]));
 			
 			Q_TRIAL Q_TRIAL(
 			.old_Q(new_Q_episodes[episode]), .action(action_episodes[episode]), .clk(clk), .rst(rst), .maze_state(maze_state_episodes[episode]), .blocked(blocked), .next_state(maze_state_episodes[episode+1]), .start_state(maze_state_episodes[0]), .target_state(target_state));
 		end
 	endgenerate
-	assign final_Q = new_Q_episodes [100];
+//	assign final_Q = new_Q_episodes [100];
 //	Q_EXPLOIT Q_EXPLOIT (
 //		.clk(clk), .rst(rst), .final_Q(final_Q), .blocked(blocked), .target_state(target_state), .start_state(start_state), .move_complete(move_complete),.maze_state(maze_state), .next_state(next_state), .timer_start(timer_start), .target_reached(target_reached));
 endmodule 
