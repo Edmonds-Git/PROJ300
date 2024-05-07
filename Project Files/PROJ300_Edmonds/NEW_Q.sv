@@ -11,9 +11,9 @@ module NEW_Q(
 	input logic rst,
 	input logic done);
 	
-	
-	//fixed point scaling factor = Q7.24
-	localparam SF = 2.0**-24.0; 
+
+	//fixed point scaling factor = Q15.16
+	localparam SF = 2.0**-16.0; 
 	localparam [31:0] learn_rate =      32'b00000000000000000011001100000000;//b00000000001100110000000000000000;//32'b00000000001100110011001100110011;//32'b00000000000000000011001100110011;//32'b00000000_001100110011001100110011; //0.2 00000000001100110011001100110011
 	localparam [31:0] discount_factor = 32'b00000000000000001110011000000000;//b00000000111001100000000000000000;//decrease precision 32'b00000000111001100110011001100110;//32'b00000000000000001110011001100110;//32'b00000000_111001100110011001100110; //0.9 00000000111001100110011001100110
 	logic [63:0] discount_x_max_Q;
@@ -54,7 +54,7 @@ module NEW_Q(
 		//result = max_Q*discount_factor;
 		//discount_x_max_Q = result[47:15];
 		discount_x_max_Q = max_Q*discount_factor;
-		disc_trim = discount_x_max_Q[48:17];//[56:24];
+		disc_trim = discount_x_max_Q[47:16];//[56:24];
 		reward_shift = reward << 16;
 		plus_reward = reward_shift + disc_trim;
 		min_Q = plus_reward - old_Q[maze_state][action];
