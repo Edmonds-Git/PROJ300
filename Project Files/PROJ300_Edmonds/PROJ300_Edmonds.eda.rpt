@@ -1,6 +1,6 @@
 EDA Netlist Writer report for PROJ300_Edmonds
-Wed May 01 19:26:32 2024
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Wed May  8 19:56:06 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -17,7 +17,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed May 01 19:26:32 2024 ;
+; EDA Netlist Writer Status ; Successful - Wed May  8 19:56:06 2024 ;
 ; Revision Name             ; PROJ300_Edmonds                       ;
 ; Top-level Entity Name     ; Top                                   ;
 ; Family                    ; Cyclone V                             ;
@@ -45,35 +45,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                                 ;
-+---------------------------------------------------------------------------------------------------+---------------------------------+
-; Option                                                                                            ; Setting                         ;
-+---------------------------------------------------------------------------------------------------+---------------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (SystemVerilog) ;
-; Generate functional simulation netlist                                                            ; Off                             ;
-; Time scale                                                                                        ; 1 ps                            ;
-; Truncate long hierarchy paths                                                                     ; Off                             ;
-; Map illegal HDL characters                                                                        ; Off                             ;
-; Flatten buses into individual nodes                                                               ; Off                             ;
-; Maintain hierarchy                                                                                ; Off                             ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                             ;
-; Enable glitch filtering                                                                           ; Off                             ;
-; Do not write top level VHDL entity                                                                ; Off                             ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                             ;
-; Architecture name in VHDL output netlist                                                          ; structure                       ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                             ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                             ;
-+---------------------------------------------------------------------------------------------------+---------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                                   ;
++---------------------------------------------------------------------------------------------------+-----------------------------------+
+; Option                                                                                            ; Setting                           ;
++---------------------------------------------------------------------------------------------------+-----------------------------------+
+; Tool Name                                                                                         ; Questa Intel FPGA (SystemVerilog) ;
+; Generate functional simulation netlist                                                            ; On                                ;
+; Truncate long hierarchy paths                                                                     ; Off                               ;
+; Map illegal HDL characters                                                                        ; Off                               ;
+; Flatten buses into individual nodes                                                               ; Off                               ;
+; Maintain hierarchy                                                                                ; Off                               ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                               ;
+; Enable glitch filtering                                                                           ; Off                               ;
+; Do not write top level VHDL entity                                                                ; Off                               ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                               ;
+; Architecture name in VHDL output netlist                                                          ; structure                         ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                               ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                               ;
++---------------------------------------------------------------------------------------------------+-----------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                          ;
-+-----------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                     ;
-+-----------------------------------------------------------------------------------------------------+
-; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/simulation/modelsim/PROJ300_Edmonds.svo ;
-+-----------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                            ;
++---------------------------------------------------------------------------------------+
+; Generated Files                                                                       ;
++---------------------------------------------------------------------------------------+
+; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/simulation/questa/PROJ300_Edmonds.svo ;
++---------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,15 +80,14 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 01 19:26:27 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Wed May  8 19:56:06 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
-Warning (10905): Generated the EDA functional simulation netlist because it is the only supported netlist type for this device.
-Info (204019): Generated file PROJ300_Edmonds.svo in folder "C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/simulation/modelsim/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4755 megabytes
-    Info: Processing ended: Wed May 01 19:26:32 2024
-    Info: Elapsed time: 00:00:05
+Info (204019): Generated file PROJ300_Edmonds.svo in folder "C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/simulation/questa/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4729 megabytes
+    Info: Processing ended: Wed May  8 19:56:06 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
