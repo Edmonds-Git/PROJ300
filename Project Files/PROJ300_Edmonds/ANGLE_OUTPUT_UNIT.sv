@@ -32,8 +32,7 @@ module ANGLE_OUTPUT_UNIT (
 			begin
 				move_complete = 0;
 			end
-		next_move = next_next_move;
-		t_restart = 0;
+		t_restart = 1;
 		case(next_move)
 			0:
 			begin
@@ -71,6 +70,7 @@ module ANGLE_OUTPUT_UNIT (
 	//for reference 0 = N, 1 = E, 2 = S, 3 = W
 	always_ff @(posedge clk)
 	begin
+		next_move = next_next_move;
 		case (next_state)
 			6'd1:
 			begin
