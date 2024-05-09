@@ -1,6 +1,6 @@
 Analysis & Synthesis report for PROJ300_Edmonds
-Wed May  8 19:55:47 2024
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Thu May 09 11:26:34 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -14,27 +14,29 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2
- 14. Parameter Settings for User Entity Instance: TOP_LEVEL:inst|TIMER:TIMER
- 15. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT"
- 16. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT"
- 17. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|MAXQ_REWARD:Q_LEARN[9].MAXQ_REWARD_episode"
- 18. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_TRIAL:Q_LEARN[9].Q_TRIAL_episode"
- 19. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
+  9. State Machine - |Top|TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2
+ 15. Parameter Settings for User Entity Instance: TOP_LEVEL:inst|TIMER:TIMER
+ 16. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT"
+ 17. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT"
+ 18. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|MAXQ_REWARD:Q_LEARN[9].MAXQ_REWARD_episode"
+ 19. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_TRIAL:Q_LEARN[9].Q_TRIAL_episode"
+ 20. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -51,27 +53,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May  8 19:55:47 2024          ;
-; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                   ; PROJ300_Edmonds                                ;
-; Top-level Entity Name           ; Top                                            ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 113                                            ;
-; Total pins                      ; 52                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 4                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu May 09 11:26:34 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; PROJ300_Edmonds                             ;
+; Top-level Entity Name           ; Top                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 113                                         ;
+; Total pins                      ; 52                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 4                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -179,28 +181,28 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
-; Q_TRIAL.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv           ;         ;
-; Q_LEARN_V2.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv        ;         ;
-; NEW_Q.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv             ;         ;
-; MAXQ_REWARD.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv       ;         ;
-; INIT_Q.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/INIT_Q.sv            ;         ;
-; BLOCKED_STATES.sv                ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/BLOCKED_STATES.sv    ;         ;
-; Top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Top.bdf              ;         ;
-; PWM_SERVO_CONTROL.sv             ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv ;         ;
-; ANGLE_OUTPUT_UNIT.sv             ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv ;         ;
-; LED_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/LED_7seg.v           ;         ;
-; ANGLE_DECODE.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv      ;         ;
-; TIMER.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv             ;         ;
-; Q_TRIAL_EXPLOIT.sv               ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv   ;         ;
-; ACTION_EXPLOIT.sv                ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ACTION_EXPLOIT.sv    ;         ;
-; Q_Exploit.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv         ;         ;
-; TOP_LEVEL.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv         ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
+; Q_TRIAL.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv           ;         ;
+; Q_LEARN_V2.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv        ;         ;
+; NEW_Q.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv             ;         ;
+; MAXQ_REWARD.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv       ;         ;
+; INIT_Q.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/INIT_Q.sv            ;         ;
+; BLOCKED_STATES.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/BLOCKED_STATES.sv    ;         ;
+; Top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Top.bdf              ;         ;
+; PWM_SERVO_CONTROL.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv ;         ;
+; ANGLE_OUTPUT_UNIT.sv             ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv ;         ;
+; LED_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/LED_7seg.v           ;         ;
+; ANGLE_DECODE.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv      ;         ;
+; TIMER.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv             ;         ;
+; Q_TRIAL_EXPLOIT.sv               ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv   ;         ;
+; ACTION_EXPLOIT.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ACTION_EXPLOIT.sv    ;         ;
+; Q_Exploit.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv         ;         ;
+; TOP_LEVEL.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv         ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -256,6 +258,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 
 
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |Top|TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move                         ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; next_move.00011 ; next_move.00010 ; next_move.00001 ; next_move.00000 ; next_move.00100 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; next_move.00000 ; 0               ; 0               ; 0               ; 0               ; 0               ;
+; next_move.00001 ; 0               ; 0               ; 1               ; 1               ; 0               ;
+; next_move.00010 ; 0               ; 1               ; 0               ; 1               ; 0               ;
+; next_move.00011 ; 1               ; 0               ; 0               ; 1               ; 0               ;
+; next_move.00100 ; 0               ; 0               ; 0               ; 1               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                                                                                                                             ;
 +-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
@@ -271,9 +287,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[7]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle1[0..7]                                           ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[3]          ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[2]       ;
-; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[2,4]                                            ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[3]                                           ;
-; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[3]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[1]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[4]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[2]                                           ;
 ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[6]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[2]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[1]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[4]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3]                                           ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][10]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][11]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][12]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
@@ -401,8 +418,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][7]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][8]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][9]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
-; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[2]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[1]                                           ;
-; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[4]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3]                                           ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0]    ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_1[0..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[8..11]                                               ; Stuck at GND due to stuck port data_in                                                                             ;
@@ -420,10 +435,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[1,2]        ; Stuck at GND due to stuck port clock                                                                               ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[0..5] ; Stuck at GND due to stuck port clock                                                                               ;
 ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|target_reached                                                       ; Stuck at GND due to stuck port data_in                                                                             ;
-; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0,1]                                            ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[1]                                           ;
-; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3,5]                                            ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[3]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[1]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[5]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[2]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[3]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[1]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[3]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_1[0..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[3]                                                      ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[0..2]                                                   ; Stuck at VCC due to stuck port data_in                                                                             ;
@@ -451,8 +470,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[3]                                                   ; Stuck at VCC due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[0..2]                                                ; Stuck at GND due to stuck port data_in                                                                             ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[1,2,7,9..11]                                           ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~2                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~3                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~5                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~6                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00100                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00000                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00001                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00010                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00011                                        ; Lost fanout                                                                                                        ;
 ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[6]                                                     ; Merged with TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[5]                                                  ;
-; Total Number of Removed Registers = 276                                                                   ;                                                                                                                    ;
+; Total Number of Removed Registers = 285                                                                   ;                                                                                                                    ;
 +-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
@@ -573,8 +601,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[2], ;
 ;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[1], ;
 ;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[0], ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[2],                                           ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[3],                                           ;
 ;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[1],                                           ;
-;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[3]                                            ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[3],                                           ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                            ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~2                                         ; Lost Fanouts              ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00100,                                     ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00000,                                     ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00010,                                     ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00011                                      ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~3                                         ; Lost Fanouts              ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00001                                      ;
 +--------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------+
 
 
@@ -719,120 +755,121 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed May  8 19:55:38 2024
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu May 09 11:26:21 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 Info (20032): Parallel compilation is enabled and will use up to 14 processors
 Info (12021): Found 1 design units, including 1 entities, in source file q_trial.sv
-    Info (12023): Found entity 1: Q_TRIAL File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv Line: 1
+    Info (12023): Found entity 1: Q_TRIAL File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file q_learn_v2.sv
-    Info (12023): Found entity 1: Q_LEARN_V2 File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 1
+    Info (12023): Found entity 1: Q_LEARN_V2 File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file new_q.sv
-    Info (12023): Found entity 1: NEW_Q File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv Line: 2
+    Info (12023): Found entity 1: NEW_Q File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file maxq_reward.sv
-    Info (12023): Found entity 1: MAXQ_REWARD File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv Line: 3
+    Info (12023): Found entity 1: MAXQ_REWARD File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file init_q.sv
-    Info (12023): Found entity 1: INIT_Q File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/INIT_Q.sv Line: 1
+    Info (12023): Found entity 1: INIT_Q File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/INIT_Q.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file blocked_states.sv
-    Info (12023): Found entity 1: BLOCKED_STATES File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/BLOCKED_STATES.sv Line: 1
+    Info (12023): Found entity 1: BLOCKED_STATES File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/BLOCKED_STATES.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file proj300_edmonds.v
-    Info (12023): Found entity 1: PROJ300_Edmonds File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.v Line: 6
+    Info (12023): Found entity 1: PROJ300_Edmonds File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_servo_control_tb.sv
-    Info (12023): Found entity 1: PWM_SERVO_CONTROL_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv Line: 1
+    Info (12023): Found entity 1: PWM_SERVO_CONTROL_TB File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
     Info (12023): Found entity 1: Top
 Info (12021): Found 1 design units, including 1 entities, in source file led_test.sv
-    Info (12023): Found entity 1: led_test File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/led_test.sv Line: 1
+    Info (12023): Found entity 1: led_test File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/led_test.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_servo_control.sv
-    Info (12023): Found entity 1: PWM_SERVO_CONTROL File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 12
+    Info (12023): Found entity 1: PWM_SERVO_CONTROL File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file angle_output_unit.sv
-    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 1
+    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file angle_output_unit_tb.sv
-    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 1
+    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT_TB File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file angle_pwm_combined_tb.sv
-    Info (12023): Found entity 1: ANGLE_PWM_COMBINED_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 1
+    Info (12023): Found entity 1: ANGLE_PWM_COMBINED_TB File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file led_7seg.v
-    Info (12023): Found entity 1: LED_7seg File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/LED_7seg.v Line: 6
+    Info (12023): Found entity 1: LED_7seg File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/LED_7seg.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file angle_decode.sv
-    Info (12023): Found entity 1: ANGLE_DECODE File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv Line: 1
+    Info (12023): Found entity 1: ANGLE_DECODE File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file timer.sv
-    Info (12023): Found entity 1: TIMER File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv Line: 6
+    Info (12023): Found entity 1: TIMER File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file q_trial_exploit.sv
-    Info (12023): Found entity 1: Q_TRIAL_EXPLOIT File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv Line: 1
+    Info (12023): Found entity 1: Q_TRIAL_EXPLOIT File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file action_exploit.sv
-    Info (12023): Found entity 1: ACTION_EXPLOIT File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ACTION_EXPLOIT.sv Line: 1
+    Info (12023): Found entity 1: ACTION_EXPLOIT File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ACTION_EXPLOIT.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file q_exploit.sv
-    Info (12023): Found entity 1: Q_EXPLOIT File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv Line: 1
+    Info (12023): Found entity 1: Q_EXPLOIT File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top_level.sv
-    Info (12023): Found entity 1: TOP_LEVEL File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 1
+    Info (12023): Found entity 1: TOP_LEVEL File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file new_q_tb.sv
-    Info (12023): Found entity 1: NEW_Q_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q_TB.sv Line: 2
+    Info (12023): Found entity 1: NEW_Q_TB File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q_TB.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file q_learn_tb.sv
-    Info (12023): Found entity 1: Q_LEARN_TB File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_TB.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at NEW_Q_TB.sv(39): created implicit net for "rst" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q_TB.sv Line: 39
+    Info (12023): Found entity 1: Q_LEARN_TB File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_TB.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at NEW_Q_TB.sv(39): created implicit net for "rst" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q_TB.sv Line: 39
 Info (12127): Elaborating entity "Top" for the top level hierarchy
 Warning (275009): Pin "KEY" not connected
 Info (12128): Elaborating entity "TOP_LEVEL" for hierarchy "TOP_LEVEL:inst"
-Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.sv(29): object "blocked" assigned a value but never read File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 29
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.sv(29): object "blocked" assigned a value but never read File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 29
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
-Info (12128): Elaborating entity "ANGLE_OUTPUT_UNIT" for hierarchy "TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 59
-Warning (10036): Verilog HDL or VHDL warning at ANGLE_OUTPUT_UNIT.sv(23): object "switches" assigned a value but never read File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 23
-Warning (10199): Verilog HDL Case Statement warning at ANGLE_OUTPUT_UNIT.sv(38): case item expression never matches the case expression File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 38
-Warning (10240): Verilog HDL Always Construct warning at ANGLE_OUTPUT_UNIT.sv(29): inferring latch(es) for variable "maze_state", which holds its previous value in one or more paths through the always construct File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
-Info (10264): Verilog HDL Case Statement information at ANGLE_OUTPUT_UNIT.sv(74): all case item expressions in this case statement are onehot File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 74
-Info (10041): Inferred latch for "maze_state[0]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
-Info (10041): Inferred latch for "maze_state[1]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
-Info (10041): Inferred latch for "maze_state[2]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
-Info (10041): Inferred latch for "maze_state[3]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
-Info (10041): Inferred latch for "maze_state[4]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
-Info (10041): Inferred latch for "maze_state[5]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
-Info (12128): Elaborating entity "PWM_SERVO_CONTROL" for hierarchy "TOP_LEVEL:inst|PWM_SERVO_CONTROL:PWM_SERVO_CONTROL" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 71
-Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(41): can't check case statement for completeness because the case expression has too many possible states File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 41
-Info (12128): Elaborating entity "Q_LEARN_V2" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 84
-Warning (10030): Net "final_Q" at Q_LEARN_V2.sv(10) has no driver or initial value, using a default initial value '0' File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 10
+Info (12128): Elaborating entity "ANGLE_OUTPUT_UNIT" for hierarchy "TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 59
+Warning (10036): Verilog HDL or VHDL warning at ANGLE_OUTPUT_UNIT.sv(23): object "switches" assigned a value but never read File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 23
+Warning (10240): Verilog HDL Always Construct warning at ANGLE_OUTPUT_UNIT.sv(29): inferring latch(es) for variable "move_complete", which holds its previous value in one or more paths through the always construct File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Warning (10240): Verilog HDL Always Construct warning at ANGLE_OUTPUT_UNIT.sv(29): inferring latch(es) for variable "maze_state", which holds its previous value in one or more paths through the always construct File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10264): Verilog HDL Case Statement information at ANGLE_OUTPUT_UNIT.sv(74): all case item expressions in this case statement are onehot File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 74
+Info (10041): Inferred latch for "maze_state[0]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[1]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[2]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[3]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[4]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[5]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "move_complete" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (12128): Elaborating entity "PWM_SERVO_CONTROL" for hierarchy "TOP_LEVEL:inst|PWM_SERVO_CONTROL:PWM_SERVO_CONTROL" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 71
+Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(41): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 41
+Info (12128): Elaborating entity "Q_LEARN_V2" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 84
+Warning (10030): Net "final_Q" at Q_LEARN_V2.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 10
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q_1" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "blocked_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q_episodes" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
-Info (12128): Elaborating entity "INIT_Q" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|INIT_Q:INIT_Q" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 39
+Info (12128): Elaborating entity "INIT_Q" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|INIT_Q:INIT_Q" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 39
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
-Info (12128): Elaborating entity "BLOCKED_STATES" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|BLOCKED_STATES:BLOCKED_STATES" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 44
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (12128): Elaborating entity "MAXQ_REWARD" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|MAXQ_REWARD:MAXQ_REWARD_init" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 69
-Warning (10235): Verilog HDL Always Construct warning at MAXQ_REWARD.sv(24): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv Line: 24
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (12128): Elaborating entity "NEW_Q" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|NEW_Q:Q_LEARN[0].NEW_Q_episode" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 95
-Warning (10235): Verilog HDL Always Construct warning at NEW_Q.sv(44): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv Line: 44
+Info (12128): Elaborating entity "BLOCKED_STATES" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|BLOCKED_STATES:BLOCKED_STATES" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 44
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (12128): Elaborating entity "Q_TRIAL" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_TRIAL:Q_LEARN[0].Q_TRIAL_episode" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 97
-Warning (10235): Verilog HDL Always Construct warning at Q_TRIAL.sv(19): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv Line: 19
+Info (12128): Elaborating entity "MAXQ_REWARD" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|MAXQ_REWARD:MAXQ_REWARD_init" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 69
+Warning (10235): Verilog HDL Always Construct warning at MAXQ_REWARD.sv(24): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/MAXQ_REWARD.sv Line: 24
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (12128): Elaborating entity "Q_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 114
+Info (12128): Elaborating entity "NEW_Q" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|NEW_Q:Q_LEARN[0].NEW_Q_episode" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 95
+Warning (10235): Verilog HDL Always Construct warning at NEW_Q.sv(44): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/NEW_Q.sv Line: 44
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "Q_TRIAL" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_TRIAL:Q_LEARN[0].Q_TRIAL_episode" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 97
+Warning (10235): Verilog HDL Always Construct warning at Q_TRIAL.sv(19): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL.sv Line: 19
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "Q_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 114
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
-Info (12128): Elaborating entity "ACTION_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv Line: 23
+Info (12128): Elaborating entity "ACTION_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv Line: 23
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (12128): Elaborating entity "Q_TRIAL_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv Line: 26
-Warning (10235): Verilog HDL Always Construct warning at Q_TRIAL_EXPLOIT.sv(20): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv Line: 20
+Info (12128): Elaborating entity "Q_TRIAL_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_Exploit.sv Line: 26
+Warning (10235): Verilog HDL Always Construct warning at Q_TRIAL_EXPLOIT.sv(20): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv Line: 20
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
-Info (12128): Elaborating entity "TIMER" for hierarchy "TOP_LEVEL:inst|TIMER:TIMER" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 104
-Warning (10762): Verilog HDL Case Statement warning at TIMER.sv(14): can't check case statement for completeness because the case expression has too many possible states File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv Line: 14
-Warning (10762): Verilog HDL Case Statement warning at TIMER.sv(22): can't check case statement for completeness because the case expression has too many possible states File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv Line: 22
-Info (12128): Elaborating entity "ANGLE_DECODE" for hierarchy "TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 116
-Info (10264): Verilog HDL Case Statement information at ANGLE_DECODE.sv(20): all case item expressions in this case statement are onehot File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv Line: 20
-Info (12128): Elaborating entity "LED_7seg" for hierarchy "TOP_LEVEL:inst|LED_7seg:LED_7seg" File: C:/GitHub/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 125
+Info (12128): Elaborating entity "TIMER" for hierarchy "TOP_LEVEL:inst|TIMER:TIMER" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 104
+Warning (10762): Verilog HDL Case Statement warning at TIMER.sv(14): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv Line: 14
+Warning (10762): Verilog HDL Case Statement warning at TIMER.sv(22): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TIMER.sv Line: 22
+Info (12128): Elaborating entity "ANGLE_DECODE" for hierarchy "TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 116
+Info (10264): Verilog HDL Case Statement information at ANGLE_DECODE.sv(20): all case item expressions in this case statement are onehot File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/ANGLE_DECODE.sv Line: 20
+Info (12128): Elaborating entity "LED_7seg" for hierarchy "TOP_LEVEL:inst|LED_7seg:LED_7seg" File: C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/TOP_LEVEL.sv Line: 125
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_0[6]" is stuck at GND
     Warning (13410): Pin "GPIO_0[4]" is stuck at GND
@@ -852,6 +889,8 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[0]" is stuck at GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
@@ -871,9 +910,15 @@ Info (21057): Implemented 407 device resources after synthesis - the final resou
     Info (21061): Implemented 351 logic cells
     Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 5149 megabytes
-    Info: Processing ended: Wed May  8 19:55:47 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 5139 megabytes
+    Info: Processing ended: Thu May 09 11:26:34 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:18
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/tedmonds/GIT/PROJ300/Project Files/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg.
 
 
