@@ -1,0 +1,31 @@
+module Q_TRIAL(
+	output logic [31:0] new_Q [37][4],
+	output logic [5:0] next_state,
+	input logic trial_stop,
+	input logic clk,
+	input logic rst,
+	input logic [31:0] old_Q [37][4],
+	input ligic [3:0] action,
+	input logic [5:0] maze_state);
+	
+	
+//	always_comb
+//	begin
+//		new_count = episode_count + 1;
+//	end
+	
+	always_ff @(posedge clk or posedge rst)
+		begin
+			if (trial_stop = 1)
+			begin
+				next_state = maze_state;
+			end
+			else
+			begin
+				case({maze_state,action})
+					10'd1+10'd0:next_state = 6'd7;
+			end
+		end
+	
+	
+endmodule

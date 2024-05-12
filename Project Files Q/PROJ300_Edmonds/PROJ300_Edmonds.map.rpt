@@ -1,0 +1,924 @@
+Analysis & Synthesis report for PROJ300_Edmonds
+Sun May 12 18:22:18 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |Top|TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2
+ 15. Parameter Settings for User Entity Instance: TOP_LEVEL:inst|TIMER:TIMER
+ 16. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT"
+ 17. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT"
+ 18. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|MAXQ_REWARD:Q_LEARN[9].MAXQ_REWARD_episode"
+ 19. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_TRIAL:Q_LEARN[9].Q_TRIAL_episode"
+ 20. Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun May 12 18:22:18 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; PROJ300_Edmonds                                ;
+; Top-level Entity Name           ; Top                                            ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 113                                            ;
+; Total pins                      ; 52                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 4                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Top                ; PROJ300_Edmonds    ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; 14                 ;                    ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 14          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-14        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; Q_TRIAL.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_TRIAL.sv           ;         ;
+; Q_LEARN_V2.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv        ;         ;
+; NEW_Q.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/NEW_Q.sv             ;         ;
+; MAXQ_REWARD.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/MAXQ_REWARD.sv       ;         ;
+; INIT_Q.sv                        ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/INIT_Q.sv            ;         ;
+; BLOCKED_STATES.sv                ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/BLOCKED_STATES.sv    ;         ;
+; Top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Top.bdf              ;         ;
+; PWM_SERVO_CONTROL.sv             ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv ;         ;
+; ANGLE_OUTPUT_UNIT.sv             ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv ;         ;
+; LED_7seg.v                       ; yes             ; User Verilog HDL File              ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/LED_7seg.v           ;         ;
+; ANGLE_DECODE.sv                  ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_DECODE.sv      ;         ;
+; TIMER.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TIMER.sv             ;         ;
+; Q_TRIAL_EXPLOIT.sv               ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv   ;         ;
+; ACTION_EXPLOIT.sv                ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ACTION_EXPLOIT.sv    ;         ;
+; Q_Exploit.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_Exploit.sv         ;         ;
+; TOP_LEVEL.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv         ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 202            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 333            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 69             ;
+;     -- 5 input functions                    ; 17             ;
+;     -- 4 input functions                    ; 14             ;
+;     -- <=3 input functions                  ; 233            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 113            ;
+;                                             ;                ;
+; I/O pins                                    ; 52             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 4              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 113            ;
+; Total fan-out                               ; 1402           ;
+; Average fan-out                             ; 2.53           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name       ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------+--------------+
+; |Top                                        ; 333 (1)             ; 113 (0)                   ; 0                 ; 4          ; 52   ; 0            ; |Top                                                    ; Top               ; work         ;
+;    |TOP_LEVEL:inst|                         ; 332 (0)             ; 113 (0)                   ; 0                 ; 4          ; 0    ; 0            ; |Top|TOP_LEVEL:inst                                     ; TOP_LEVEL         ; work         ;
+;       |ANGLE_DECODE:ANGLE_DECODE|           ; 4 (4)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE           ; ANGLE_DECODE      ; work         ;
+;       |LED_7seg:LED_7seg|                   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|TOP_LEVEL:inst|LED_7seg:LED_7seg                   ; LED_7seg          ; work         ;
+;       |PWM_SERVO_CONTROL:PWM_SERVO_CONTROL| ; 324 (324)           ; 108 (108)                 ; 0                 ; 4          ; 0    ; 0            ; |Top|TOP_LEVEL:inst|PWM_SERVO_CONTROL:PWM_SERVO_CONTROL ; PWM_SERVO_CONTROL ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 4           ;
+; Total number of DSP blocks      ; 4           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 4           ;
++---------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |Top|TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move                         ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; next_move.00011 ; next_move.00010 ; next_move.00001 ; next_move.00000 ; next_move.00100 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+; next_move.00000 ; 0               ; 0               ; 0               ; 0               ; 0               ;
+; next_move.00001 ; 0               ; 0               ; 1               ; 1               ; 0               ;
+; next_move.00010 ; 0               ; 1               ; 0               ; 1               ; 0               ;
+; next_move.00011 ; 1               ; 0               ; 0               ; 1               ; 0               ;
+; next_move.00100 ; 0               ; 0               ; 0               ; 1               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                             ; Reason for Removal                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[0,1]                                            ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[5]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[6]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[7]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[0,2]                                            ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[4]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[5..7]                                           ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[7]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle1[0..7]                                           ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[3]          ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[2]       ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[4]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[2]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[6]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[2]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[1]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[4]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3]                                           ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][10]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][11]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][12]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][13]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][14]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][15]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][16]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][17]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][18]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][19]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][1]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][20]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][21]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][22]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][23]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][24]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][25]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][26]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][27]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][28]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][29]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][2]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][30]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][31]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][3]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][4]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][5]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][6]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][7]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][8]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][9]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][0]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][10]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][11]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][12]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][13]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][14]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][15]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][16]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][17]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][18]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][19]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][1]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][20]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][21]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][22]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][23]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][24]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][25]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][26]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][27]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][28]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][29]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][2]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][30]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][31]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][3]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][4]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][5]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][6]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][7]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][8]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[1][9]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][0]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][10]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][11]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][12]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][13]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][14]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][15]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][16]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][17]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][18]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][19]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][1]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][20]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][21]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][22]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][23]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][24]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][25]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][26]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][27]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][28]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][29]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][2]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][30]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][31]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][3]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][4]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][5]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][6]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][7]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][8]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[2][9]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][0]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][10]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][11]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][12]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][13]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][14]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][15]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][16]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][17]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][18]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][19]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][1]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][20]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][21]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][22]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][23]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][24]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][25]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][26]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][27]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][28]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][29]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][2]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][30]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][31]   ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][3]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][4]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][5]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][6]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][7]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][8]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[3][9]    ; Merged with TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0]    ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_1[0..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[8..11]                                               ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_1[1..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_1[0]                                                      ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[9..11]                                               ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[8]                                                   ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_3[0..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_2[0..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_1[0..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|LED0                                                                                       ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[0..11]                                               ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[0]          ; Stuck at GND due to stuck port clock                                                                               ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|done               ; Stuck at GND due to stuck port clock                                                                               ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[1,2]        ; Stuck at GND due to stuck port clock                                                                               ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[0..5] ; Stuck at GND due to stuck port clock                                                                               ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|target_reached                                                       ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[1]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[5]                                              ; Merged with TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3]                                           ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[2]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[3]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[1]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[3]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                              ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[3]                                              ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_1[0..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[3]                                                      ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[0..2]                                                   ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_3[1..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_3[0]                                                      ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[7..11]                                               ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[4..6]                                                ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[1..3]                                                ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[0]                                                   ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_2[1..3]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_2[0]                                                      ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_3[3]                                                      ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_3[0..2]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[5..7]                                                ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[3,4]                                                 ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[0..2]                                                ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_2[3]                                                      ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_2[1,2]                                                    ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_2[0]                                                      ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_3[3]                                                      ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_3[0..2]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[7]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[5,6]                                                 ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[4]                                                   ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[3]                                                   ; Stuck at VCC due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[0..2]                                                ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[1,2,7,9..11]                                           ; Stuck at GND due to stuck port data_in                                                                             ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~2                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~3                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~5                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~6                                            ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00100                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00000                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00001                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00010                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00011                                        ; Lost fanout                                                                                                        ;
+; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[6]                                                     ; Merged with TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[5]                                                  ;
+; Total Number of Removed Registers = 285                                                                   ;                                                                                                                    ;
++-----------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                  ;
++--------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------+
+; Register name                                                                                          ; Reason for Removal        ; Registers Removed due to This Register                                                                  ;
++--------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------+
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[0]                                           ; Stuck at GND              ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_1[3],                                                   ;
+;                                                                                                        ; due to stuck port data_in ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_1[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_1[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_1[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[11],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[10],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[9],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[8],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_2[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_2[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_2[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_2[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_3[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_3[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_3[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle3_3[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[7],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[6],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[5],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[4],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[3],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[2],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[1],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_3[0],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[9],                                                  ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[10],                                                 ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[11]                                                  ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle1[0]                                           ; Stuck at GND              ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_3[0],                                                   ;
+;                                                                                                        ; due to stuck port data_in ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_3[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_3[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_3[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_2[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_2[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_2[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_2[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_1[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_1[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_1[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle1_1[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[0],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[1],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[2],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[3],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[4],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[5],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[6],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[7],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[8],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[9],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[10],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_1[11],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[1],                                                  ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[2],                                                  ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[7]                                                   ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[1]                                           ; Stuck at GND              ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_1[3],                                                   ;
+;                                                                                                        ; due to stuck port data_in ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_1[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_1[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_1[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[11],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[10],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[9],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[8],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_2[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_2[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_2[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_2[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_3[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_3[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_3[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle4_3[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[7],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[6],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[5],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[4],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[3],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[2],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[1],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_4[0]                                                 ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[7]                                           ; Stuck at GND              ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_1[3],                                                   ;
+;                                                                                                        ; due to stuck port data_in ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_1[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_1[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_1[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_2[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_3[3],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_3[2],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_3[1],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle2_3[0],                                                   ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[11],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[10],                                               ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[9],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[8],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[7],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[6],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[5],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[4],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[3],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[2],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[1],                                                ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out_2[0]                                                 ;
+; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|current_Q[0][0] ; Stuck at GND              ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[0],       ;
+;                                                                                                        ; due to stuck port data_in ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|done,            ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[1],       ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT|action[2],       ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[5], ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[4], ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[3], ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[2], ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[1], ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT|next_state[0], ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[2],                                           ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle4[3],                                           ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[1],                                           ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle3[3],                                           ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|angle2[0]                                            ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~2                                         ; Lost Fanouts              ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00100,                                     ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00000,                                     ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00010,                                     ;
+;                                                                                                        ;                           ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00011                                      ;
+; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move~3                                         ; Lost Fanouts              ; TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT|next_move.00001                                      ;
++--------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 113   ;
+; Number of registers using Synchronous Clear  ; 37    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 77    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 16:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |Top|TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE|angle_out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2 ;
++----------------+----------------------------------+-------------------------------+
+; Parameter Name ; Value                            ; Type                          ;
++----------------+----------------------------------+-------------------------------+
+; N              ; 00000000000000000000000000001011 ; Unsigned Binary               ;
++----------------+----------------------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TOP_LEVEL:inst|TIMER:TIMER ;
++----------------+---------+----------------------------------------------+
+; Parameter Name ; Value   ; Type                                         ;
++----------------+---------+----------------------------------------------+
+; N              ; 1000000 ; Signed Integer                               ;
++----------------+---------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT" ;
++-------+--------+----------+----------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                ;
++-------+--------+----------+----------------------------------------------------------------------------------------+
+; max_Q ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.    ;
++-------+--------+----------+----------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT" ;
++---------+-------+----------+---------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                 ;
++---------+-------+----------+---------------------------------------------------------+
+; final_Q ; Input ; Info     ; Stuck at GND                                            ;
++---------+-------+----------+---------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|MAXQ_REWARD:Q_LEARN[9].MAXQ_REWARD_episode"      ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; done_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; max_Q  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; action ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reward ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_TRIAL:Q_LEARN[9].Q_TRIAL_episode"                  ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; next_state ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2"                                                           ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; final_Q[2..36]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; final_Q[0]       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; final_Q[1][2..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; final_Q[1][0]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; blocked          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; target_state     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 113                         ;
+;     ENA               ; 72                          ;
+;     ENA SCLR          ; 5                           ;
+;     SCLR              ; 32                          ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 336                         ;
+;     arith             ; 172                         ;
+;         0 data inputs ; 16                          ;
+;         1 data inputs ; 156                         ;
+;     normal            ; 164                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 54                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 14                          ;
+;         5 data inputs ; 17                          ;
+;         6 data inputs ; 69                          ;
+; arriav_mac            ; 4                           ;
+; boundary_port         ; 52                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.43                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Sun May 12 18:22:07 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
+Info (20032): Parallel compilation is enabled and will use up to 14 processors
+Info (12021): Found 1 design units, including 1 entities, in source file q_trial.sv
+    Info (12023): Found entity 1: Q_TRIAL File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_TRIAL.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file q_learn_v2.sv
+    Info (12023): Found entity 1: Q_LEARN_V2 File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file new_q.sv
+    Info (12023): Found entity 1: NEW_Q File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/NEW_Q.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file maxq_reward.sv
+    Info (12023): Found entity 1: MAXQ_REWARD File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/MAXQ_REWARD.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file init_q.sv
+    Info (12023): Found entity 1: INIT_Q File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/INIT_Q.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file blocked_states.sv
+    Info (12023): Found entity 1: BLOCKED_STATES File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/BLOCKED_STATES.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file proj300_edmonds.v
+    Info (12023): Found entity 1: PROJ300_Edmonds File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/PROJ300_Edmonds.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file pwm_servo_control_tb.sv
+    Info (12023): Found entity 1: PWM_SERVO_CONTROL_TB File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/PWM_SERVO_CONTROL_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
+    Info (12023): Found entity 1: Top
+Info (12021): Found 1 design units, including 1 entities, in source file led_test.sv
+    Info (12023): Found entity 1: led_test File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/led_test.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pwm_servo_control.sv
+    Info (12023): Found entity 1: PWM_SERVO_CONTROL File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file angle_output_unit.sv
+    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file angle_output_unit_tb.sv
+    Info (12023): Found entity 1: ANGLE_OUTPUT_UNIT_TB File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file angle_pwm_combined_tb.sv
+    Info (12023): Found entity 1: ANGLE_PWM_COMBINED_TB File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_PWM_COMBINED_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file led_7seg.v
+    Info (12023): Found entity 1: LED_7seg File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/LED_7seg.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file angle_decode.sv
+    Info (12023): Found entity 1: ANGLE_DECODE File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_DECODE.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file timer.sv
+    Info (12023): Found entity 1: TIMER File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TIMER.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file q_trial_exploit.sv
+    Info (12023): Found entity 1: Q_TRIAL_EXPLOIT File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file action_exploit.sv
+    Info (12023): Found entity 1: ACTION_EXPLOIT File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ACTION_EXPLOIT.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file q_exploit.sv
+    Info (12023): Found entity 1: Q_EXPLOIT File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_Exploit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top_level.sv
+    Info (12023): Found entity 1: TOP_LEVEL File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file new_q_tb.sv
+    Info (12023): Found entity 1: NEW_Q_TB File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/NEW_Q_TB.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file q_learn_tb.sv
+    Info (12023): Found entity 1: Q_LEARN_TB File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_TB.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at NEW_Q_TB.sv(39): created implicit net for "rst" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/NEW_Q_TB.sv Line: 39
+Info (12127): Elaborating entity "Top" for the top level hierarchy
+Warning (275009): Pin "KEY" not connected
+Info (12128): Elaborating entity "TOP_LEVEL" for hierarchy "TOP_LEVEL:inst"
+Warning (10036): Verilog HDL or VHDL warning at TOP_LEVEL.sv(29): object "blocked" assigned a value but never read File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 29
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
+Info (12128): Elaborating entity "ANGLE_OUTPUT_UNIT" for hierarchy "TOP_LEVEL:inst|ANGLE_OUTPUT_UNIT:ANGLE_OUTPUT_UNIT" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 59
+Warning (10036): Verilog HDL or VHDL warning at ANGLE_OUTPUT_UNIT.sv(23): object "switches" assigned a value but never read File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 23
+Warning (10240): Verilog HDL Always Construct warning at ANGLE_OUTPUT_UNIT.sv(29): inferring latch(es) for variable "move_complete", which holds its previous value in one or more paths through the always construct File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Warning (10240): Verilog HDL Always Construct warning at ANGLE_OUTPUT_UNIT.sv(29): inferring latch(es) for variable "maze_state", which holds its previous value in one or more paths through the always construct File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10264): Verilog HDL Case Statement information at ANGLE_OUTPUT_UNIT.sv(74): all case item expressions in this case statement are onehot File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 74
+Info (10041): Inferred latch for "maze_state[0]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[1]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[2]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[3]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[4]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "maze_state[5]" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (10041): Inferred latch for "move_complete" at ANGLE_OUTPUT_UNIT.sv(29) File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_OUTPUT_UNIT.sv Line: 29
+Info (12128): Elaborating entity "PWM_SERVO_CONTROL" for hierarchy "TOP_LEVEL:inst|PWM_SERVO_CONTROL:PWM_SERVO_CONTROL" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 71
+Warning (10762): Verilog HDL Case Statement warning at PWM_SERVO_CONTROL.sv(41): can't check case statement for completeness because the case expression has too many possible states File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/PWM_SERVO_CONTROL.sv Line: 41
+Info (12128): Elaborating entity "Q_LEARN_V2" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 84
+Warning (10030): Net "final_Q" at Q_LEARN_V2.sv(10) has no driver or initial value, using a default initial value '0' File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 10
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q_1" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "blocked_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q_episodes" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
+Info (12128): Elaborating entity "INIT_Q" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|INIT_Q:INIT_Q" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 39
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (12128): Elaborating entity "BLOCKED_STATES" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|BLOCKED_STATES:BLOCKED_STATES" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 44
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "MAXQ_REWARD" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|MAXQ_REWARD:MAXQ_REWARD_init" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 69
+Warning (10235): Verilog HDL Always Construct warning at MAXQ_REWARD.sv(24): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/MAXQ_REWARD.sv Line: 24
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "NEW_Q" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|NEW_Q:Q_LEARN[0].NEW_Q_episode" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 95
+Warning (10235): Verilog HDL Always Construct warning at NEW_Q.sv(44): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/NEW_Q.sv Line: 44
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "new_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "Q_TRIAL" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_TRIAL:Q_LEARN[0].Q_TRIAL_episode" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 97
+Warning (10235): Verilog HDL Always Construct warning at Q_TRIAL.sv(19): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_TRIAL.sv Line: 19
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "Q_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_LEARN_V2.sv Line: 114
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "final_Q" into its bus
+Info (12128): Elaborating entity "ACTION_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|ACTION_EXPLOIT:ACTION_EXPLOIT" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_Exploit.sv Line: 23
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "Q_TRIAL_EXPLOIT" for hierarchy "TOP_LEVEL:inst|Q_LEARN_V2:Q_LEARN_V2|Q_EXPLOIT:Q_EXPLOIT|Q_TRIAL_EXPLOIT:Q_TRIAL_EXPLOIT" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_Exploit.sv Line: 26
+Warning (10235): Verilog HDL Always Construct warning at Q_TRIAL_EXPLOIT.sv(20): variable "done" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/Q_TRIAL_EXPLOIT.sv Line: 20
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "old_Q" into its bus
+Info (12128): Elaborating entity "TIMER" for hierarchy "TOP_LEVEL:inst|TIMER:TIMER" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 104
+Warning (10762): Verilog HDL Case Statement warning at TIMER.sv(14): can't check case statement for completeness because the case expression has too many possible states File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TIMER.sv Line: 14
+Warning (10762): Verilog HDL Case Statement warning at TIMER.sv(22): can't check case statement for completeness because the case expression has too many possible states File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TIMER.sv Line: 22
+Info (12128): Elaborating entity "ANGLE_DECODE" for hierarchy "TOP_LEVEL:inst|ANGLE_DECODE:ANGLE_DECODE" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 116
+Info (10264): Verilog HDL Case Statement information at ANGLE_DECODE.sv(20): all case item expressions in this case statement are onehot File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/ANGLE_DECODE.sv Line: 20
+Info (12128): Elaborating entity "LED_7seg" for hierarchy "TOP_LEVEL:inst|LED_7seg:LED_7seg" File: C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/TOP_LEVEL.sv Line: 125
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "GPIO_0[6]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[4]" is stuck at GND
+    Warning (13410): Pin "GPIO_0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "RESET_N"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+Info (21057): Implemented 407 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 351 logic cells
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 5166 megabytes
+    Info: Processing ended: Sun May 12 18:22:18 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:17
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/GitHub/PROJ300/Project Files Q/PROJ300_Edmonds/PROJ300_Edmonds.map.smsg.
+
+

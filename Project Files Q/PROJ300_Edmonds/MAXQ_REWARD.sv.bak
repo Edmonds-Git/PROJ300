@@ -1,0 +1,5 @@
+module UPDATE_Q (
+	output logic [7:0]Q,
+	input logic [7:0]Q,
+	input logic [7:0]maze_state,
+	

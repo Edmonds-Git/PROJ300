@@ -1,0 +1,11 @@
+module Q_LEARN_V2(
+	input clk,
+	input rst,
+	input rdy,
+	output action,
+	output maze_state);
+	
+	subcomponent INIT_Q (
+		.clk(clk), .rst(rst));
+		
+endmodule 
