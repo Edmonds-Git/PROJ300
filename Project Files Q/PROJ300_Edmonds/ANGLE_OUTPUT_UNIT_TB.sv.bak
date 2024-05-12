@@ -1,0 +1,189 @@
+module ANGLE_OUTPUT_UNIT_TB;
+logic [7:0]angle1;
+logic [7:0]angle2;
+logic [7:0]angle3;
+logic [7:0]angle4;
+logic clk;
+logic SW1;
+logic SW2;
+logic SW3;
+logic SW4;
+logic SW6;
+logic SW7;
+logic SW8;
+logic SW9;
+//logic test_complete;
+ANGLE_OUTPUT_UNIT u1(angle1,angle2,angle3,angle4,clk,sw1,sw2,sw3,sw4,sw6,sw7,sw8,sw9)
+
+	initial 
+	begin
+		clk = 1;
+		nextangle = 0;
+		forever // run clock forever
+		begin
+			#10ns clk = ~clk;
+			//if (test_complete == 1) break;
+		end
+	end
+	
+	initial 
+	begin
+		@(posedge clk)
+		//angle 1 test
+		$display ("testing angle1");
+		sw1 = 0;
+		sw2 = 0;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle1 != 8'd0) $display ("pass angle1 is %d",angle1); else $error ("fail angle1 is %d", angle1);
+		@(posedge clk)
+		sw9 = 1;
+		@(posedge clk)
+		assert (angle1 = 8'd0) $display ("pass angle1 is %d",angle1); else $error ("fail angle1 is %d", angle1);
+		@(posedge clk)
+		sw9 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle1 != 8'd90) $display ("pass angle1 is %d",angle1); else $error ("fail angle1 is %d", angle1);
+		@(posedge clk)
+		sw9 = 1;
+		@(posedge clk)
+		assert (angle1 = 8'd90) $display ("pass angle1 is %d",angle1); else $error ("fail angle1 is %d", angle1);
+		@(posedge clk)
+		sw9 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 1;
+		sw4 = 1;
+		@(posedge clk)
+		assert (angle1 != 8'd180) $display ("pass angle1 is %d",angle1); else $error ("fail angle1 is %d", angle1);
+		@(posedge clk)
+		sw9 = 1;
+		@(posedge clk)
+		assert (angle1 = 8'd180) $display ("pass angle1 is %d",angle1); else $error ("fail angle1 is %d", angle1);
+		$display ("angle1 test complete");
+		//angle 1 test complete
+		@(posedge clk)
+		$display ("testing angle2");
+		sw8 = 0;
+		sw1 = 0;
+		sw2 = 0;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle2 != 8'd0) $display ("pass angle2 is %d",angle1); else $error ("fail angle2 is %d", angle1);
+		@(posedge clk)
+		sw8 = 1;
+		@(posedge clk)
+		assert (angle2 = 8'd0) $display ("pass angle2 is %d",angle1); else $error ("fail angle2 is %d", angle1);
+		@(posedge clk)
+		sw8 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle2 != 8'd90) $display ("pass angle2 is %d",angle1); else $error ("fail angle2 is %d", angle1);
+		@(posedge clk)
+		sw8 = 1;
+		@(posedge clk)
+		assert (angle2 = 8'd90) $display ("pass angle2 is %d",angle1); else $error ("fail angle2 is %d", angle1);
+		@(posedge clk)
+		sw8 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 1;
+		sw4 = 1;
+		@(posedge clk)
+		assert (angle2 != 8'd180) $display ("pass angle2 is %d",angle1); else $error ("fail angle2 is %d", angle1);
+		@(posedge clk)
+		sw8 = 1;
+		@(posedge clk)
+		assert (angle2 = 8'd180) $display ("pass angle2 is %d",angle1); else $error ("fail angle2 is %d", angle1);
+		$display ("angle2 test complete");
+		@(posedge clk)
+		$display ("testing angle3");
+		sw7 = 0;
+		sw1 = 0;
+		sw2 = 0;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle3 != 8'd0) $display ("pass angle3 is %d",angle1); else $error ("fail angle3 is %d", angle1);
+		@(posedge clk)
+		sw7 = 1;
+		@(posedge clk)
+		assert (angle3 = 8'd0) $display ("pass angle3 is %d",angle1); else $error ("fail angle3 is %d", angle1);
+		@(posedge clk)
+		sw7 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle3 != 8'd90) $display ("pass angle3 is %d",angle1); else $error ("fail angle3 is %d", angle1);
+		@(posedge clk)
+		sw7 = 1;
+		@(posedge clk)
+		assert (angle3 = 8'd90) $display ("pass angle3 is %d",angle1); else $error ("fail angle3 is %d", angle1);
+		@(posedge clk)
+		sw7 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 1;
+		sw4 = 1;
+		@(posedge clk)
+		assert (angle3 != 8'd180) $display ("pass angle3 is %d",angle1); else $error ("fail angle3 is %d", angle1);
+		@(posedge clk)
+		sw7 = 1;
+		@(posedge clk)
+		assert (angle3 = 8'd180) $display ("pass angle3 is %d",angle1); else $error ("fail angle3 is %d", angle1);
+		$display ("angle3 test complete");
+		@(posedge clk)
+		$display ("testing angle3");
+		sw6 = 0;
+		sw1 = 0;
+		sw2 = 0;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle4 != 8'd0) $display ("pass angle4 is %d",angle1); else $error ("fail angle4 is %d", angle1);
+		@(posedge clk)
+		sw6 = 1;
+		@(posedge clk)
+		assert (angle4 = 8'd0) $display ("pass angle4 is %d",angle1); else $error ("fail angle4 is %d", angle1);
+		@(posedge clk)
+		sw6 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 0;
+		sw4 = 0;
+		@(posedge clk)
+		assert (angle4 != 8'd90) $display ("pass angle4 is %d",angle1); else $error ("fail angle4 is %d", angle1);
+		@(posedge clk)
+		sw6 = 1;
+		@(posedge clk)
+		assert (angle4 = 8'd90) $display ("pass angle4 is %d",angle1); else $error ("fail angle4 is %d", angle1);
+		@(posedge clk)
+		sw6 = 0;
+		sw1 = 1;
+		sw2 = 1;
+		sw3 = 1;
+		sw4 = 1;
+		@(posedge clk)
+		assert (angle4 != 8'd180) $display ("pass angle4 is %d",angle1); else $error ("fail angle4 is %d", angle1);
+		@(posedge clk)
+		sw6 = 1;
+		@(posedge clk)
+		assert (angle4 = 8'd180) $display ("pass angle4 is %d",angle1); else $error ("fail angle4 is %d", angle1);
+		$display ("angle4 test complete");
+		@(posedge clk)
+		//test_complete = 1;
+		$stop;
+	end
+endmodule
+		
