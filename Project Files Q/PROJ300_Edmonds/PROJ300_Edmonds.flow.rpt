@@ -1,5 +1,5 @@
 Flow report for PROJ300_Edmonds
-Sun May 12 18:22:40 2024
+Mon May 13 08:36:54 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Sun May 12 18:22:36 2024          ;
+; Flow Status                     ; Flow Failed - Mon May 13 08:36:54 2024         ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; PROJ300_Edmonds                                ;
 ; Top-level Entity Name           ; Top                                            ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CEBA4F23C7                                    ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 200 / 18,480 ( 1 % )                           ;
-; Total registers                 ; 120                                            ;
+; Logic utilization (in ALMs)     ; 41,622 / 18,480 ( 225 % )                      ;
+; Total registers                 ; 34611                                          ;
 ; Total pins                      ; 52 / 224 ( 23 % )                              ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                          ;
-; Total DSP Blocks                ; 4 / 66 ( 6 % )                                 ;
+; Total DSP Blocks                ; 48 / 66 ( 73 % )                               ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/12/2024 18:22:07 ;
+; Start date & time ; 05/13/2024 08:32:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PROJ300_Edmonds     ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+-----------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+-----------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1099327769120.171553452715416          ; --              ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1099327769120.171558557315504          ; --              ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --              ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --              ; --          ; --         ;
 ; NUM_PARALLEL_PROCESSORS             ; 14                                     ; --              ; --          ; --         ;
@@ -97,11 +97,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 5166 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:14     ; 1.1                     ; 7311 MB             ; 00:01:13                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4848 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.5                     ; 5190 MB             ; 00:00:03                           ;
-; Total                ; 00:00:30     ; --                      ; --                  ; 00:01:35                           ;
+; Analysis & Synthesis ; 00:00:37     ; 2.6                     ; 5503 MB             ; 00:01:24                           ;
+; Fitter               ; 00:03:21     ; 1.1                     ; 7868 MB             ; 00:15:45                           ;
+; Total                ; 00:03:58     ; --                      ; --                  ; 00:17:09                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,8 +110,6 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; PC               ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; PC               ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; PC               ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; PC               ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -122,8 +118,6 @@ https://fpgasoftware.intel.com/eula.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
 quartus_fit --read_settings_files=off --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
-quartus_asm --read_settings_files=off --write_settings_files=off PROJ300_Edmonds -c PROJ300_Edmonds
-quartus_sta PROJ300_Edmonds -c PROJ300_Edmonds
 
 
 

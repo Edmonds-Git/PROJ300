@@ -48,13 +48,8 @@ module NEW_Q(
 	end
 	always @(posedge done_clk)
 	begin
-	//	done_o = 0;
-		//convert back to 32 bit Q7.24
-		//not actually needed for now
-		//result = max_Q*discount_factor;
-		//discount_x_max_Q = result[47:15];
 		discount_x_max_Q = max_Q*discount_factor;
-		disc_trim = discount_x_max_Q[47:16];//[56:24];
+		disc_trim = discount_x_max_Q[47:16];
 		reward_shift = reward << 16;
 		plus_reward = reward_shift + disc_trim;
 		min_Q = plus_reward - old_Q[maze_state][action];
@@ -67,16 +62,13 @@ module NEW_Q(
 			min_Q_F = min_Q;
 		end
 		X_learn = min_Q_F * learn_rate;
-		//Probably need to remove the first and last 16 bits of X_learn
-//		X_learn_Trim = 32'd0;
-		X_learn_Trim = X_learn[47:16];//[56:24];// X_learn << 32;
+		X_learn_Trim = X_learn[47:16];
 		if (min_Q[31] == 1)
 		begin
 			X_learn_Trim = ~X_learn_Trim;
 		end
 		else
 			X_learn_Trim = X_learn_Trim;
-		//X_learn_Trim = X_learn >>> 32;
 		new_Q = old_Q;
 		new_Q[maze_state][action] = old_Q[maze_state][action] + X_learn_Trim;//add old_Q to the middle 32 bits of X_learn
 		done_o = 1;

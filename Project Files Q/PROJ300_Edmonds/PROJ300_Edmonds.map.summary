@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun May 12 18:22:18 2024
+Analysis & Synthesis Status : Successful - Mon May 13 08:33:32 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : PROJ300_Edmonds
 Top-level Entity Name : Top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 113
+Total registers : 34931
 Total pins : 52
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 4
+Total DSP Blocks : 48
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

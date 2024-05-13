@@ -26,8 +26,37 @@ module BLOCKED_STATES(
 	end
 	always @(posedge clk)
 	begin
-	//	done = 0;
 		new_Q = old_Q; //start with new Q equal to old Q
+		//
+		//W
+		new_Q[1][3] = 0;
+		new_Q[7][3] = 0;
+		new_Q[13][3] = 0;
+		new_Q[19][3] = 0;
+		new_Q[25][3] = 0;
+		new_Q[31][3] = 0;
+		//N
+		new_Q[31][0] = 0;
+		new_Q[32][0] = 0;
+		new_Q[33][0] = 0;
+		new_Q[34][0] = 0;
+		new_Q[35][0] = 0;
+		new_Q[36][0] = 0;
+		//E
+		new_Q[36][1] = 0;
+		new_Q[30][1] = 0;
+		new_Q[24][1] = 0;
+		new_Q[18][1] = 0;
+		new_Q[12][1] = 0;
+		new_Q[6][1] = 0;
+		//S
+		new_Q[6][2] = 0;
+		new_Q[5][2] = 0;
+		new_Q[4][2] = 0;
+		new_Q[3][2] = 0;
+		new_Q[2][2] = 0;
+		new_Q[1][2] = 0;
+		//
 		for (int i = 0; i < $size(blocked); i++) //repeat as many times as there are blocked states
 		begin
 			case (blocked[i])

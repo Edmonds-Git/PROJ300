@@ -35,17 +35,19 @@ module Q_LEARN_TB();
 		rst = 1;
 		clk = 1;
 		move_complete = 1;
-		maze_state = 0;
+		maze_state = 1;
+		next_state = 1;
 		forever // run clock forever
 		begin
 			#10ns clk = ~clk; //10ns duty cycle for 20ns period and 50MHz clock
+			maze_state = next_state;
 			if (test_complete == 1) break;//stop clock when the final test is complete
 		end
 	end
 	
 	initial
 	begin
-	#5ms;
+	#1ms;
 		@(posedge clk)
 		test_complete = 1;
 	end

@@ -1,7 +1,6 @@
 module Q_TRIAL(
 	output logic [5:0] next_state,
 	output logic done_o,
-	//output logic target_reached,
 	input logic clk,
 	input logic rst,
 	input logic [31:0] old_Q [37][4],
