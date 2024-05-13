@@ -1,4 +1,4 @@
-# PROJ300
+# FPGA CONTROLLED MAZE SOLVING ROBOTIC ARM
 
 [Report](Management/Report.pdf)
 [Risk Assessment](Management/Risk_Assessment_Form.docm)
